@@ -180,25 +180,29 @@ REQ-5: touching the list option executes 4.4
 
 ## 5.1 Performance Requirements
 
+On all devices compatible with Check In, users will be able to respond to questions within 10 seconds of receipt.
+
+A device connected to WiFi or 4G LTE mobile data will be capable of sending a question or a response to another such device through Check In’s server backend within 30 seconds.
+
 ## 5.2 Safety Requirements
+
+With any phone application, comes the chance of harm to the user when used in an unsafe manner. It’s important to note that while this app is a quick and easy replacement for some texting, it still requires the attention of the user and should not be used when in the threat of danger. Frequent messages should be provided on the app that alerts users to put their device away while driving a car, for example.
 
 ## 5.3 Security Requirements
 
+The app will collect minimal data about the user. For identity authentication, if the user elects to use Facebook, all security will be handled through Facebook’s API. If the user elects to use email verification, the Firebase backend provides an authentication service with built-in security considerations.
+
 ## 5.4 Software Quality Attributes
 
-### Availability
-
-### Correctness
-
-### Maintainability
-
-### Reliability
-
-### Testability
-
-### Usability
+Check In is designed to be a quick and efficient way of asking simple questions to one or many people, so speed should be the top priority when implementing. Another important attribute is the ease of use. The app should feature a minimalist home screen that lets users quickly send a message to others without the hassle of customizable settings. The simplicity and speed of Check In should be what drives users toward the product.
 
 ## 5.5 Business Rules
+
+Each question in the database can only be viewed by its original sender and that sender’s chosen recipients. The content of questions will be hidden from everyone else, including app authors.
+
+# 6. Other Requirements
+
+Because our plan is to use the Facebook API for the login functionality of the application, we must follow the terms of service described by them. Using Google’s Firebase database also requires the compliance to their terms of service agreement. 
 
 # Appendix A: Glossary
 
