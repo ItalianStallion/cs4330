@@ -206,6 +206,18 @@ Because our plan is to use the Facebook API for the login functionality of the a
 
 # Appendix A: Glossary
 
+4G LTE - The fourth generation of cellular data that transfers data at high rates of speed
+
+API - The Application Program Interface that defines how software components interact
+
+HTTP - The set of rules for transferring data on the Internet
+
+IDE - A development environment for software
+
+JSON - A type of object-oriented formatting for the javascript programming language
+
+WiFi - the means of connecting a device to the Internet wirelessly
+
 # Appendix B: Analysis Models
 
 # Appendix C: To Be Determined List
