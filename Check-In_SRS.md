@@ -28,9 +28,9 @@ Last updated: October 21st, 2016
   3. [Software Interfaces](#33-software-interfaces)
   4. [Communications Interfaces](#34-communications-interfaces)
 4. [System Features](#4-system-features)
-  1. Feature 1
-  2. Feature 2
-  3. Feature 3
+  1. Create and Send Questions
+  2. Receive Question or Reply
+  3. View All Group Messages
 5. [Other Nonfunctional Requirements](#5-other-nonfunctional-requirements)
   1. [Performance Requirements](#51-performance-requirements)
   2. [Safety Requirements](#52-safety-requirements)
@@ -125,7 +125,7 @@ Check In requires internet access to communicate with the Firebase database for 
 
 # 4. System Features
 
-## 4.1 Create and Send Question
+## 4.1 Create and Send Questions
 
 ### 4.1.1 Description and Priority
 Compose a yes or no question to send to a group. Select the recipient(s) that will receive this question from a list of your contacts. Send a notification containing the information filled in earlier to everyone listed as a Recipient. High Priority, Benefit: 9, Cost: 7.
