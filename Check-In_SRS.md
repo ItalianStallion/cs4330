@@ -128,13 +128,14 @@ Check In requires internet access to communicate with the Firebase database for 
 ## 4.1 Create and Send Question
 
 ### 4.1.1 Description and Priority
-Compose a yes or no question to send to a group. Select the Recipient(s) that will receive this question from a list of your contacts. Send a notification containing the information filled in earlier to everyone listed as a Recipient. High Importance. Main function of the app.
+Compose a yes or no question to send to a group. Select the recipient(s) that will receive this question from a list of your contacts. Send a notification containing the information filled in earlier to everyone listed as a Recipient. High Priority, Benefit: 9, Cost: 7.
 
 ### 4.1.2 Stimulus/Response Sequences
-A form page containing 2 sections one for Recipients one for Question will appear once the compose Question button is clicked in the lower left portion of the start screen. After the Sender presses “Send” the notifications will be sent and a new group will appear at the top of the users Groups tab. 
+User taps the new question button at the bottom of the homepage. A new screen prompting for a question and recipient(s) is created. The user can type a question and search or scroll their list of contacts to select recipients. Once the prompts have been answered, the user can send or cancel the request.
 
 ### 4.1.3 Functional Requirements 
-Must be able to send a push notification to the phones of everyone on the recipients List. Every Recipient should have the app and be able to receive notifications if on list. Questions should be able to fit in 3 lines of text Max (IDK what that character limit is but would be better to have char limit) Must have at least one recipient and entry into the Question text box before the “Send” button is able to be pressed.
+
+The sender should have the app installed and must login in order to send messages. The recipient of the messages must also have the app. If a recipient does not have the app, then they will not be added to the sender's contact list and will not be an available option. Questions must be greater than 0 characters and are limited to 140 and recipient list must be non-null and is limited to 300 users to keep backend requests manageably small. The send button cannot be pressed until these limits are respected. If the user was able to send regardless of the security feature, the message will be thrown and an error will pop up on screen regarding these limits.
 
 ## 4.2 Receive Question or Reply
 
