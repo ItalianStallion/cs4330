@@ -109,11 +109,19 @@ Users will be given a one-time tutorial upon first run to explain the main funct
 
 ## 3.1 User Interfaces
 
+The app design will be tailored to fit Google’s Material Design standards. On the home screen there will be two tabs separating lists of recent questions asked to and by the user. Each of these list elements can be tapped to reveal each recipient’s status, the time the message was sent, and the actions the sender can take (deleting the question, muting response notifications). In the top right there will be an ellipsis where a user can access app settings, a page of its own which includes the features of deleting a user account and muting all notifications. Settings will also be accessible from the drawer which includes the question list and contacts as well. To create a new question, users can click the floating action button on the main screen which prompts them for a question title and recipient list from contacts.
+
 ## 3.2 Hardware Interfaces
+
+Devices must be internet enabled Android 5.0 or greater phones or tablets.
 
 ## 3.3 Software Interfaces
 
+The app will be created using Google’s Android API and compiled with Gradle in Android Studio. Users will be able to create an account through Facebook login or email address and password sign up. Login verification is handled by Firebase Authentication and Facebook API. Messages are sent and received through calls to the Firebase API services. These messages are stored as JSON objects in our database to be updated upon editing or deleting by users. Messages are pulled from the Firebase backend and cached on the device until updated again.
+
 ## 3.4 Communications Interfaces
+
+Check In requires internet access to communicate with the Firebase database for retrieving and sending messages and responses. Internet connection is also required to authenticate users’ email addresses or Facebook accounts through HTTP standard requests through Firebase encryption API which may in turn call Facebook Authentication API when necessary.
 
 # 4. System Features
 
