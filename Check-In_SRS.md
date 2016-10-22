@@ -140,41 +140,28 @@ The sender should have the app installed and must login in order to send message
 ## 4.2 Receive Question or Reply
 
 ### 4.2.1 Description and Priority
-The Recipient will receive a push notification that will appear on their lock screen. From the lock screen the Recipient must be able to answer the question by pressing yes or no and the app will update the database accordingly. High Importance: main function of the app
+The recipient receives a notification that appears on their lock screen. From the lock screen the recipient is able to answer the question by pressing yes or no and the app will update the database accordingly. High Priority, Benefit: 9, Cost: 7.
 
 ### 4.2.2 Stimulus/Response Sequences
-As simple as possible. One click from the user will update the database accordingly and remove the notification from their screen.
+User taps yes or no on the lock screen notification. If the user closes the notification or has notifications muted, he or she can also tap yes or no from within the app's homepage. After tapping a response, the notification or list element is dismissed and the answer is recorded on the Firebase database.
 
 ### 4.2.3 Functional Requirements
-REQ-1: The push notification must be sent by the Sender
 
-REQ-2: The push notification must contain the name of the sender, the question and a yes/no checkbox.
+The recipient should have the app installed and must login in order to receive messages. After the notification is received, the recipient can click the yes or no buttons, or swipe the notification to dismiss. If the notification is dismissed, the user's answer is pending and can still be answered from within the app. If a user would like to change his or her response, it can be change at any time by tapping the question within the received tab of the homepage of the app and tapping the desired response.
 
-REQ-3: Upon clicking yes/no the response will be recorded in the database.
-
-REQ-4: Upon clicking the push notification will disappear
-
-REQ-5: If recipient deletes the push notification, he/she may answer it later in-app (ambiguous) 
-
-## 4.3 View All Group Messages
+## 4.3 View Messages
 
 ### 4.3.1 Description and Priority:
-Users will have a list of all their active groups that will contain the name of the sender at the top followed by the question under it. It will also contain an options button off to the right and a number representing the number of Yes replies. High importance but not as high as 4.1-4.2
+
+User can tap a single or group question from homepage list to expand details into view including time sent, sender, recipients, responses, and actions like block or leave group.
 
 ### 4.3.2 Stimulus/Response Sequences
-Appears as the main page when the app is open. Represented as a list under the navBar at the top. When the message is clicked 4.4 is executed where the list of Recipients is shown as well as their responses. When the options button is clicked a drop down appears with corresponding options depending on the users relation to the group (i.e. Sender options, recipient options)
+
+Appears as the main page when the app is open. Represented as a list under the navigation bar at the top. Tapping elements of the list causes the list element to expand below revealing extra details listed above. Tapping the element again causes the elements to hide once again. Tapping block or leave group causes the question element to disappear.
 
 ### 4.3.3 Functional Requirements
-REQ-1: A group that is created will be shown as a list object to both Senders and Recipients
 
-REQ-2: that list object will contain the correct Sender name at the top and Question below it.
-
-REQ-3: the number on the right representing number of yes replies will update in real time(may change to update every time the app is opened)
-
-REQ-4: the options will open a drop down that contains a list of proper actions based on if the user if a Sender or a Recipient
-
-REQ-5: touching the list option executes 4.4
-
+After a message is sent, a list element is appended to the sender's sent tab list and the receiver's received tab list. The element is filled with data from the database including time sent, sender, recipients, responses, and actions depending on the sender (sender has action delete question, receiver has actions block and leave group). If one of these elements is missing, the question will throw an error on the sender end and the list element will be removed.
 
 # 5. Other Nonfunctional Requirements
 
