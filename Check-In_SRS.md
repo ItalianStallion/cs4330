@@ -127,39 +127,39 @@ Check In requires internet access to communicate with the Firebase database for 
 
 ## 4.1 Create and Send Questions
 
-### 4.1.1 Description and Priority
+#### 4.1.1 Description and Priority
 Compose a yes or no question to send to a group. Select the recipient(s) that will receive this question from a list of your contacts. Send a notification containing the information filled in earlier to everyone listed as a Recipient. High Priority, Benefit: 9, Cost: 7.
 
-### 4.1.2 Stimulus/Response Sequences
+#### 4.1.2 Stimulus/Response Sequences
 User taps the new question button at the bottom of the homepage. A new screen prompting for a question and recipient(s) is created. The user can type a question and search or scroll their list of contacts to select recipients. Once the prompts have been answered, the user can send or cancel the request.
 
-### 4.1.3 Functional Requirements 
+#### 4.1.3 Functional Requirements 
 
 The sender should have the app installed and must login in order to send messages. The recipient of the messages must also have the app. If a recipient does not have the app, then they will not be added to the sender's contact list and will not be an available option. Questions must be greater than 0 characters and are limited to 140 and recipient list must be non-null and is limited to 300 users to keep backend requests manageably small. The send button cannot be pressed until these limits are respected. If the user was able to send regardless of the security feature, the message will be thrown and an error will pop up on screen regarding these limits.
 
 ## 4.2 Receive Question or Reply
 
-### 4.2.1 Description and Priority
+#### 4.2.1 Description and Priority
 The recipient receives a notification that appears on their lock screen. From the lock screen the recipient is able to answer the question by pressing yes or no and the app will update the database accordingly. High Priority, Benefit: 9, Cost: 7.
 
-### 4.2.2 Stimulus/Response Sequences
+#### 4.2.2 Stimulus/Response Sequences
 User taps yes or no on the lock screen notification. If the user closes the notification or has notifications muted, he or she can also tap yes or no from within the app's homepage. After tapping a response, the notification or list element is dismissed and the answer is recorded on the Firebase database.
 
-### 4.2.3 Functional Requirements
+#### 4.2.3 Functional Requirements
 
 The recipient should have the app installed and must login in order to receive messages. After the notification is received, the recipient can click the yes or no buttons, or swipe the notification to dismiss. If the notification is dismissed, the user's answer is pending and can still be answered from within the app. If a user would like to change his or her response, it can be change at any time by tapping the question within the received tab of the homepage of the app and tapping the desired response.
 
 ## 4.3 View Messages
 
-### 4.3.1 Description and Priority:
+#### 4.3.1 Description and Priority:
 
 User can tap a single or group question from homepage list to expand details into view including time sent, sender, recipients, responses, and actions like block or leave group.
 
-### 4.3.2 Stimulus/Response Sequences
+#### 4.3.2 Stimulus/Response Sequences
 
 Appears as the main page when the app is open. Represented as a list under the navigation bar at the top. Tapping elements of the list causes the list element to expand below revealing extra details listed above. Tapping the element again causes the elements to hide once again. Tapping block or leave group causes the question element to disappear.
 
-### 4.3.3 Functional Requirements
+#### 4.3.3 Functional Requirements
 
 After a message is sent, a list element is appended to the sender's sent tab list and the receiver's received tab list. The element is filled with data from the database including time sent, sender, recipients, responses, and actions depending on the sender (sender has action delete question, receiver has actions block and leave group). If one of these elements is missing, the question will throw an error on the sender end and the list element will be removed.
 
