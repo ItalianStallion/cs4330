@@ -207,4 +207,8 @@ WiFi - the means of connecting a device to the Internet wirelessly
 
 # Appendix B: Analysis Models
 
+Future version updates could include analysis models found here
+
 # Appendix C: To Be Determined List
+
+Future features which may require TBD information could be found here
