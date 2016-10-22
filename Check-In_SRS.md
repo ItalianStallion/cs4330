@@ -28,9 +28,9 @@ Last updated: October 21st, 2016
   3. [Software Interfaces](#33-software-interfaces)
   4. [Communications Interfaces](#34-communications-interfaces)
 4. [System Features](#4-system-features)
-  1. Create and Send Questions
-  2. Receive Question or Reply
-  3. View All Group Messages
+  1. [Create and Send Questions](#41-create-and-send-questions)
+  2. [Receive Question or Reply](#42-receive-questions-or-reply)
+  3. [View All Group Messages](#43-view-all-group-messages)
 5. [Other Nonfunctional Requirements](#5-other-nonfunctional-requirements)
   1. [Performance Requirements](#51-performance-requirements)
   2. [Safety Requirements](#52-safety-requirements)
