@@ -7,8 +7,10 @@ Prepared by [Ben Graham](http://github.com/graham768), [John Edward](http://gith
 Last updated: November 21st, 2016
 
 ## List of Test Cases
-### 1 - Successful Facebook login
-### 2 - Create a New Question
+### 1 - [Successful Facebook Login](#Test-Case-1:-Successful-Facebook-Login)
+### 2 - [Create a New Question](#Test-Case-2:-Create-a-New-Question)
+
+---
 
 ## Test Case 1: Successful Facebook Login
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
@@ -26,6 +28,8 @@ Last updated: November 21st, 2016
 |Post Condition|
 |--------------|
 |The User is logged in under their Facebook Account|
+
+---
 
 ## Test Case 2: Create a New Question
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
