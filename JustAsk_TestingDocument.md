@@ -7,8 +7,8 @@ Prepared by [Ben Graham](http://github.com/graham768), [John Edward](http://gith
 Last updated: November 21st, 2016
 
 ## List of Test Cases
-### 1 - [Successful Facebook Login](#Test-Case-1:-Successful-Facebook-Login)
-### 2 - [Create a New Question](#Test-Case-2:-Create-a-New-Question)
+### 1 - [Successful Facebook Login](#test-case-1-successful-facebook-login)
+### 2 - [Create a New Question](#test-case-2-create-a-new-question)
 
 ---
 
