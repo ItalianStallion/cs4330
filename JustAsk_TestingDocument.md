@@ -165,7 +165,6 @@ Last updated: November 21st, 2016
 ---
 
 ## Test Case 8: View Question
->>>>>>> origin/master
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Failed Login|Patrick Mancuso|10/21/16| | |
