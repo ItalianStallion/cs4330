@@ -9,6 +9,10 @@ Last updated: November 21st, 2016
 ## List of Test Cases
 ### 1 - [Successful Facebook Login](#test-case-1-successful-facebook-login)
 ### 2 - [Create a New Question](#test-case-2-create-a-new-question)
+### 3 - [Respond Yes to Notification](#test-case-3-respond-yes-to-notification)
+### 4 - [Respond No to Notification](#test-case-4-respond-no-to-notification)
+### 5 - [Respond Yes Inside Application](#test-case-5-respond-yes-inside-application)
+### 6 - [Respond No Inside Application](#test-case-6-respond-no-inside-application)
 
 ---
 
@@ -50,5 +54,93 @@ Last updated: November 21st, 2016
 |Post Condition|
 |--------------|
 |User is brought back to question list tab|
+
+---
+
+## Test Case 3: Respond Yes to Notification
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Notification|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. The question has been received by the recipient's phone|
+|3. The push notification has appeared|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap the yes button on the notification||Notification disappears and recipient is updatedto "yes" in the database| | |
+
+|Post Condition|
+|--------------|
+|The recipient's status is updated in the database as responding yes|
+
+---
+
+## Test Case 4: Respond No to Notification
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Notification|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. The question has been received by the recipient's phone|
+|3. The push notification has appeared|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap the no button on the notification||Notification disappears and recipient is updated to "no" in the database| | |
+
+|Post Condition|
+|--------------|
+|The recipient's status is updated in the database as responding no|
+
+---
+
+## Test Case 5: Respond Yes Inside Application
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Question|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. The question has been received by the recipient's phone|
+|3. App is launched|
+|4. The recipient has navigated to the question list tab|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap unanswered question in question list|Question activity appears| | |
+|2.  |Tap yes in Question activity|Question activity updates to show the recipient has responded yes and database is updated| | | 
+
+|Post Condition|
+|--------------|
+|The recipient's status is updated in the database as responding yes|
+
+---
+
+## Test Case 6: Respond No Inside Application
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Question|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. The question has been received by the recipient's phone|
+|3. App is launched|
+|4. The recipient has navigated to the question list tab|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap unanswered question in question list|Question activity appears| | |
+|2.  |Tap no in Question activity|Question activity updates to show the recipient has responded no and database is updated| | | 
+
+|Post Condition|
+|--------------|
+|The recipient's status is updated in the database as responding no|
 
 
