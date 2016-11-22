@@ -13,6 +13,9 @@ Last updated: November 21st, 2016
 ### 4 - [Respond No to Notification](#test-case-4-respond-no-to-notification)
 ### 5 - [Respond Yes Inside Application](#test-case-5-respond-yes-inside-application)
 ### 6 - [Respond No Inside Application](#test-case-6-respond-no-inside-application)
+### 9 - [Open and Close Drawer](#test-case-9-open-and-close-drawer)
+### 10 - [Tap Questions tab from Drawer](#test-case-10-tap-questions-tab-from-drawer)
+### 11 - [Tap Contacts tab from Drawer](#test-case-11-tap-contacts-from-drawer)
 
 ---
 
@@ -143,4 +146,65 @@ Last updated: November 21st, 2016
 |--------------|
 |The recipient's status is updated in the database as responding no|
 
+---
 
+## Test Case 9: Open and Close Drawer
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Drawer|Ben Graham|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap drawer button|Drawer opens displaying list items: Questions, Contacts, Setttings| |
+|2.  |Tap drawer button after opening drawer|Drawer closes displaying current tab| |
+
+|Post Condition|
+|--------------|
+|The drawer is closed revealing the current tab|
+
+---
+
+## Test Case 10: Tap Questions tab from Drawer
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Drawer|Ben Graham|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. Drawer is open|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap Questions tab|Question list activity is loaded with user information from database (. Drawer is closed.|
+
+|Post Condition|
+|--------------|
+|Question tab inside drawer is highlighted; User is brought to questions list activity|
+
+---
+
+## Test Case 11: Tap Contacts tab from Drawer
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Drawer|Ben Graham|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. Drawer is open|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap Contacts tab|Contact activity is loaded with user's friends from database. Drawer is closed.|
+
+|Post Condition|
+|--------------|
+|Question tab inside drawer is highlighted; User is brought to questions list activity|
