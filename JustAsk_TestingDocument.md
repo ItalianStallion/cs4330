@@ -17,7 +17,7 @@ Last updated: November 21st, 2016
 #### 8 - [View Question](#test-case-8-view-question)
 #### 9 - [Open and Close Drawer](#test-case-9-open-and-close-drawer)
 #### 10 - [Tap Questions tab from Drawer](#test-case-10-tap-questions-tab-from-drawer)
-#### 11 - [Tap Contacts tab from Drawer](#test-case-11-tap-contacts-from-drawer)
+#### 11 - [Tap Contacts tab from Drawer](#test-case-11-tap-contacts-tab-from-drawer)
 #### 12 - [Open and Close Settings](#test-case-12-open-and-close-settings)
 #### 13 - [Mute Notifications](#test-case-13-mute-notifications)
 #### 14 - [Unmute Notifications](#test-case-14-unmute-notifications)
@@ -34,11 +34,13 @@ Last updated: November 21st, 2016
 |Preconditions|
 |-------------|
 |1. Successful Application Launch|
+|2. User is not logged in to JustAsk|
+|3. User has a Facebook account and is logged in on their phone|
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Taps 'Login with Facebook'|Facebook is launched and user is prompted to give JustAsk access to name and friend list. If user is not logged into Facebook, the user logs in now.| | |
-|2.  |User gives JustAsk permission to access name and friend list|Facebook Manager notifies JustAsk of a successful login and local database fills with user information| | |
+|1.  |Tap 'Login with Facebook'|Facebook Manager is launched and user is prompted to give JustAsk access to name and friend list.| | |
+|2.  |Tap within Facebook Manager to give JustAsk permission to access name and friend list|Facebook Manager notifies JustAsk of a successful login and local database fills with user information| | |
 
 |Post Condition|
 |--------------|
@@ -53,13 +55,13 @@ Last updated: November 21st, 2016
 
 |Preconditions|
 |-------------|
-|1. The system displays the main activity (question list tab)|
+|1. The main activity (question list tab) is open|
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Taps the plus button in the buttom right corner|New Question activity initialized prompting user for question details| | |
-|2.  |Enter a question and select recipients|Recipients receive a checkmark by their name (uncheck if Tapped again)| | |
-|3.  |Taps Send|Question sends to each contact in recipient list and is added to question list tab| | |
+|1.  |Tap the plus button in the bottom right corner|NewQuestion activity initialized prompting user for question details| | |
+|2.  |Enter a question and select recipients|Recipients receive a checkmark by their name (uncheck if tapped again)| | |
+|3.  |Tap Send|Question sends to each contact in recipient list and is added to question list tab| | |
 
 |Post Condition|
 |--------------|
@@ -80,7 +82,7 @@ Last updated: November 21st, 2016
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Tap the yes button on the notification||Notification disappears and recipient is updatedto "yes" in the database| | |
+|1.  |Tap the yes button on the notification|Notification disappears and recipient is updated to "yes" in the database| | |
 
 |Post Condition|
 |--------------|
