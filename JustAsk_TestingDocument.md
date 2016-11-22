@@ -143,4 +143,47 @@ Last updated: November 21st, 2016
 |--------------|
 |The recipient's status is updated in the database as responding no|
 
+---
+
+## Test Case 7: Unsucessful Facebook Login
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Failed Login|Patrick Mancuso|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Successful Application Launch|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Click 'Login with Facebook'|Facebook manager is launched and response is sent from faceBook to app with details of the failed login. These details are displayed on the app underneath the FaceBook Login button| | |
+
+|Post Condition|
+|--------------|
+|The User remains on the login page with the error message displayed. User can attempt to login again|
+
+---
+
+## Test Case 8: View Question
+>>>>>>> origin/master
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Failed Login|Patrick Mancuso|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Successful Application Launch|
+|2. User is logged in| 
+|3. User is on the Questions tab (main screen)|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Click which message you want to view |make call to database pulling table of recipients to messages and their answers. Table is then displayed as a new activity that still contains the app drawer. | | |
+
+|Post Condition|
+|--------------|
+|1. User is on the View Message activity  |
+|2. Entire list of recipients and answers are displayed under the question as a scrollable list |
+|3. App drawer is functional in the upper left corner |
+
 
