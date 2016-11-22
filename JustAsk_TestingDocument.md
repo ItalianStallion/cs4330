@@ -252,3 +252,115 @@ Last updated: November 21st, 2016
 |Post Condition|
 |--------------|
 |Question tab inside drawer is highlighted; User is brought to questions list activity|
+
+---
+
+## Test Case 12: Open and Close Settings
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Settings|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. The drawer is open|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap settings list item|Settings activity opens| | |
+|2.  |Tap back button|User is directed back to the main activity| | |
+
+|Post Condition|
+|--------------|
+|App is in the main activity (question list tab)|
+
+---
+
+## Test Case 13: Mute Notifications
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Settings|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. The settings activity is open|
+|4. User's notifications are not muted|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap checkbox next to "Mute Notifications"|Check box updates to checked and user entry in database is updated| | |
+|2.  |Press home button on phone|App closes| | |
+|3.  |Send user question from another phone|No push notification appears on user's phone| | |
+
+|Post Condition|
+|--------------|
+|The app is closed and the user has no push notifications from JustAsk|
+
+---
+
+## Test Case 14: Unmute Notifications
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Settings|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. The settings activity is open|
+|4. User's notifications are muted|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap checkbox next to "Mute Notifications"|Check box updates to unchecked and user entry in database is updated| | |
+|2.  |Press home button on phone|App closes| | |
+|3.  |Send user question from another phone|Push notification appears on user's phone| | |
+
+|Post Condition|
+|--------------|
+|The app is closed and the user has one push notification from JustAsk|
+
+---
+
+## Test Case 15: Logout
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Settings|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. The settings activity is open|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap logout list item|User is redirected to login screen| | |
+
+|Post Condition|
+|--------------|
+|The session is updated in the database to have no user associated with it|
+
+---
+
+## Test Case 16: Delete Account
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Settings|Sam Dowd|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Recipient is logged in|
+|2. App is launched|
+|3. The settings activity is open|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap delete account list item|User is redirected to the login page| | |
+
+|Post Condition|
+|--------------|
+|User is removed from the database|
