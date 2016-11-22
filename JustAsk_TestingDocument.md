@@ -103,7 +103,7 @@ Last updated: November 21st, 2016
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Tap the no button on the notification||Notification disappears and recipient is updated to "no" in the database| | |
+|1.  |Tap the no button on the notification|Notification disappears and recipient is updated to "no" in the database| | |
 
 |Post Condition|
 |--------------|
