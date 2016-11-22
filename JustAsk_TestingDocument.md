@@ -7,17 +7,22 @@ Prepared by [Ben Graham](http://github.com/graham768), [John Edward](http://gith
 Last updated: November 21st, 2016
 
 ## List of Test Cases
-### 1 - [Successful Facebook Login](#test-case-1-successful-facebook-login)
-### 2 - [Create a New Question](#test-case-2-create-a-new-question)
-### 3 - [Respond Yes to Notification](#test-case-3-respond-yes-to-notification)
-### 4 - [Respond No to Notification](#test-case-4-respond-no-to-notification)
-### 5 - [Respond Yes Inside Application](#test-case-5-respond-yes-inside-application)
-### 6 - [Respond No Inside Application](#test-case-6-respond-no-inside-application)
-### 7 - [Unsucessful Facebook Login](#test-case-7-unsuccessful-facebook-login)
-### 8 - [View Question](#test-case-8-view-question)
-### 9 - [Open and Close Drawer](#test-case-9-open-and-close-drawer)
-### 10 - [Tap Questions tab from Drawer](#test-case-10-tap-questions-tab-from-drawer)
-### 11 - [Tap Contacts tab from Drawer](#test-case-11-tap-contacts-from-drawer)
+#### 1 - [Successful Facebook Login](#test-case-1-successful-facebook-login)
+#### 2 - [Create a New Question](#test-case-2-create-a-new-question)
+#### 3 - [Respond Yes to Notification](#test-case-3-respond-yes-to-notification)
+#### 4 - [Respond No to Notification](#test-case-4-respond-no-to-notification)
+#### 5 - [Respond Yes Inside Application](#test-case-5-respond-yes-inside-application)
+#### 6 - [Respond No Inside Application](#test-case-6-respond-no-inside-application)
+#### 7 - [Unsucessful Facebook Login](#test-case-7-unsuccessful-facebook-login)
+#### 8 - [View Question](#test-case-8-view-question)
+#### 9 - [Open and Close Drawer](#test-case-9-open-and-close-drawer)
+#### 10 - [Tap Questions tab from Drawer](#test-case-10-tap-questions-tab-from-drawer)
+#### 11 - [Tap Contacts tab from Drawer](#test-case-11-tap-contacts-from-drawer)
+#### 12 - [Open and Close Settings](#test-case-12-open-and-close-settings)
+#### 13 - [Mute Notifications](#test-case-13-mute-notifications)
+#### 14 - [Unmute Notifications](#test-case-14-unmute-notifications)
+#### 15 - [Logout](#test-case-15-logout)
+#### 16 - [Delete Account](#test-case-16-delete-account)
 
 ---
 
