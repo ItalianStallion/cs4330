@@ -44,3 +44,10 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 ---
 
 ## Meeting Summary
+|Meeting Time|Members Present|Objective/Outcome|
+|------|---------------|-------------------------|
+|9/5/16|All Group Members Present|Meeting to discuss system ideas and presentation. We decided to make a notification application that allows people to check in on others with a simple notification to the receipients phone|
+|10/12/16|All Group Members Present|Goal was to discuss the software requirements document. We decided that our check in idea would not be an ideal app due to liability risks, so we adapted the idea into an rsvp application for creating and receiving simple yes/no questions|
+|10/19/16|All Group Members Present|Meeting to work on the Requirements Document and polish it up for grading|
+|10/31/16|All Group Members Present|Goal for this meeting was to discuss and begin working on the system design document. Individual Members were to work on certain sections in Google Docs and put the complete document on Github when finished|
+|11/21/16|All Group Members Present|The testing document was due tonight, so the team met to discuss all possible testing paths to produce a complete testing document|
