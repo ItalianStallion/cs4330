@@ -74,16 +74,13 @@ The inspiration for Check In arose from the lack of simplicity in current duo or
 
 ## 2.2 Product Functions
 
-- Users can create an account by linking their Facebook profile or using their email address
-- Users can add contacts and send app invites from their phone contacts or Facebook friends.
+- Users can sign in by linking their Facebook profile
 - Users can send questions to a single person or group of people.
-- Users can block certain individuals from sending them notifications
 - Users can mute all notifications in a form of silent mode.
-- Recipient can respond to sent questions from their device’s lock screen.
+- Recipient can respond to sent questions from their device’s lock screen or in-app.
 - Senders receive responses from recipients inside the app.
 - In group settings, recipients can see other group members’ responses as well.
-- Senders can delete their question at any point to remove it from the recipient’s phone(s).
-- Recipients can remove themselves from group listings at will.
+
 
 ## 2.3 User Classes and Characteristics
 
