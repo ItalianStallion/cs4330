@@ -40,7 +40,7 @@ Benjamin Graham: Tasks include but not limited to design of the backend database
 
 Sam Dowd and Patrick Mancuso: Their tasks include designing the layout and functionality of the application pages. Switching between pages is also an important task, as our application will be focused on ease-of-use.
 
-Miles Vesper and John Edward Schwartzenburg will focus on the login system using Facebook and the push notifications for questions.
+Miles Vesper and John Edward Schwartzenburg: tasks will focus on the login system using Facebook and the push notifications for questions.
 
 Because of the inexperience of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.
 
