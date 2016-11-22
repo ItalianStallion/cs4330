@@ -148,7 +148,7 @@ Last updated: November 21st, 2016
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Tap unanswered question in question list|Question activity appears| | |
+|1.  |Tap unanswered question in question list|Question activity is loaded and opens with question and recipient list from database| | |
 |2.  |Tap no in Question activity|Question activity updates to show the recipient has responded no and database is updated| | | 
 
 |Post Condition|
@@ -160,7 +160,7 @@ Last updated: November 21st, 2016
 ## Test Case 7: Unsucessful Facebook Login
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Failed Login|Patrick Mancuso|10/21/16| | |
+|JustAsk|Login|Patrick Mancuso|10/21/16| | |
 
 |Preconditions|
 |-------------|
@@ -168,7 +168,8 @@ Last updated: November 21st, 2016
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Click 'Login with Facebook'|Facebook manager is launched and response is sent from faceBook to app with details of the failed login. These details are displayed on the app underneath the FaceBook Login button| | |
+|1.  |Tap 'Login with Facebook'|Facebook Login is launched within the app.| | |
+|2.  |Enter invalid credentials (ie. username "ZZZZZZZZ")|Facebook manager returns error| | |
 
 |Post Condition|
 |--------------|
@@ -179,23 +180,22 @@ Last updated: November 21st, 2016
 ## Test Case 8: View Question
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Failed Login|Patrick Mancuso|10/21/16| | |
+|JustAsk|Question|Patrick Mancuso|10/21/16| | |
 
 |Preconditions|
 |-------------|
 |1. Successful Application Launch|
 |2. User is logged in| 
-|3. User is on the Questions tab (main screen)|
+|3. User is on the main activity (question list tab)|
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Click which message you want to view |make call to database pulling table of recipients to messages and their answers. Table is then displayed as a new activity that still contains the app drawer. | | |
+|1.  |Tap question element from question list |Question activity is created with question and recipient list data loaded from the database| | |
+|2.  |Tap back button to exit question |Question activity is destroyed and user is brought back to question list activity| | |
 
 |Post Condition|
 |--------------|
-|1. User is on the View Message activity  |
-|2. Entire list of recipients and answers are displayed under the question as a scrollable list |
-|3. App drawer is functional in the upper left corner |
+|User is on the main activity (question list activity)|
 
 ---
 
