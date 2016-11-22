@@ -7,13 +7,13 @@ Prepared by [Ben Graham](http://github.com/graham768), [John Edward Schwartzenbu
 Last updated: November 22, 2016
 
 ## Index
-### [Vision](#vision)
-### [Configuration Management Plan](#configuration-management-plan)
-### [Process Model](#process-model)
-### [Potential Risks](#potential-risks)
-### [Team Members](#team-members)
-### [Project Schedule](#project-schedule)
-### [Meeting Summary](#meeting-summary)
+### [1. Vision](#vision)
+### [2. Configuration Management Plan](#configuration-management-plan)
+### [3. Process Model](#process-model)
+### [4. Potential Risks](#potential-risks)
+### [5. Team Members](#team-members)
+### [6. Project Schedule](#project-schedule)
+### [7. Meeting Summary](#meeting-summary)
 
 ---
 
