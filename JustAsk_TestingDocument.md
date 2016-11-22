@@ -2,7 +2,7 @@
 
 # JustAsk
 
-Prepared by [Ben Graham](http://github.com/graham768), [John Edward](http://github.com/), [Miles Vesper](http://github.com/), [Patrick Mancuso](http://github.com/ItalianStallion), and [Sam Dowd](http://github.com/samdowd).
+Prepared by [Ben Graham](http://github.com/graham768), [John Edward Schwartzenburg](http://github.com/), [Miles Vesper](http://github.com/mvesper20), [Patrick Mancuso](http://github.com/ItalianStallion), and [Sam Dowd](http://github.com/samdowd).
 
 Last updated: November 21st, 2016
 
@@ -15,14 +15,15 @@ Last updated: November 21st, 2016
 #### 6 - [Respond No Inside Application](#test-case-6-respond-no-inside-application)
 #### 7 - [Unsucessful Facebook Login](#test-case-7-unsuccessful-facebook-login)
 #### 8 - [View Question](#test-case-8-view-question)
-#### 9 - [Open and Close Drawer](#test-case-9-open-and-close-drawer)
-#### 10 - [Tap Questions tab from Drawer](#test-case-10-tap-questions-tab-from-drawer)
-#### 11 - [Tap Contacts tab from Drawer](#test-case-11-tap-contacts-tab-from-drawer)
-#### 12 - [Open and Close Settings](#test-case-12-open-and-close-settings)
-#### 13 - [Mute Notifications](#test-case-13-mute-notifications)
-#### 14 - [Unmute Notifications](#test-case-14-unmute-notifications)
-#### 15 - [Logout](#test-case-15-logout)
-#### 16 - [Delete Account](#test-case-16-delete-account)
+#### 9 - [Close Question Activity](#test-case-9-close-question-activity)
+#### 10 - [Open and Close Drawer](#test-case-10-open-and-close-drawer)
+#### 11 - [Tap Questions tab from Drawer](#test-case-11-tap-questions-tab-from-drawer)
+#### 12 - [Tap Contacts tab from Drawer](#test-case-12-tap-contacts-tab-from-drawer)
+#### 13 - [Open and Close Settings](#test-case-13-open-and-close-settings)
+#### 14 - [Mute Notifications](#test-case-14-mute-notifications)
+#### 15 - [Unmute Notifications](#test-case-15-unmute-notifications)
+#### 16 - [Logout](#test-case-16-logout)
+#### 17 - [Delete Account](#test-case-17-delete-account)
 
 ---
 
@@ -72,7 +73,7 @@ Last updated: November 21st, 2016
 ## Test Case 3: Respond Yes to Notification
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Notification|Sam Dowd|10/21/16| | |
+|JustAsk|Notification|John Edward Schwartzenburg|10/21/16| | |
 
 |Preconditions|
 |-------------|
@@ -93,7 +94,7 @@ Last updated: November 21st, 2016
 ## Test Case 4: Respond No to Notification
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Notification|Sam Dowd|10/21/16| | |
+|JustAsk|Notification|John Edward Schwartzenburg|10/21/16| | |
 
 |Preconditions|
 |-------------|
@@ -199,7 +200,28 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 9: Open and Close Drawer
+## Test Case 9: Close Question Activity
+|System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
+|------|---------|-----------|-----------|-----------|-------------|
+|JustAsk|Question|Patrick Mancuso|10/21/16| | |
+
+|Preconditions|
+|-------------|
+|1. Successful Application Launch|
+|2. User is logged in| 
+|3. User viewing a question activity|
+
+|Step|Action|Expected System Response|Pass/Fail|Comment|
+|----|------|------------------------|---------|-------|
+|1.  |Tap back button |Question activity is destroyed| | |
+
+|Post Condition|
+|--------------|
+|User is on the main activity (question list activity)|
+
+---
+
+## Test Case 10: Open and Close Drawer
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Drawer|Ben Graham|10/21/16| | |
@@ -220,7 +242,7 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 10: Tap Questions tab from Drawer
+## Test Case 11: Tap Questions tab from Drawer
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Drawer|Ben Graham|10/21/16| | |
@@ -241,7 +263,7 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 11: Tap Contacts tab from Drawer
+## Test Case 12: Tap Contacts tab from Drawer
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Drawer|Ben Graham|10/21/16| | |
@@ -262,7 +284,7 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 12: Open and Close Settings
+## Test Case 13: Open and Close Settings
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Settings|Sam Dowd|10/21/16| | |
@@ -284,10 +306,10 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 13: Mute Notifications
+## Test Case 14: Mute Notifications
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Settings|Sam Dowd|10/21/16| | |
+|JustAsk|Settings|Ben Graham|10/21/16| | |
 
 |Preconditions|
 |-------------|
@@ -308,7 +330,7 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 14: Unmute Notifications
+## Test Case 15: Unmute Notifications
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Settings|Sam Dowd|10/21/16| | |
@@ -332,10 +354,10 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 15: Logout
+## Test Case 16: Logout
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Settings|Sam Dowd|10/21/16| | |
+|JustAsk|Settings|Patrick Mancuso|10/21/16| | |
 
 |Preconditions|
 |-------------|
@@ -353,7 +375,7 @@ Last updated: November 21st, 2016
 
 ---
 
-## Test Case 16: Delete Account
+## Test Case 17: Delete Account
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
 |JustAsk|Settings|Sam Dowd|10/21/16| | |
