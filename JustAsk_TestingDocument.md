@@ -23,11 +23,12 @@ Last updated: November 21st, 2016
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Click 'Login with Facebook'|Facebook is launched and uses currently logged in account to login| | |
+|1.  |Taps 'Login with Facebook'|Facebook is launched and user is prompted to give JustAsk access to name and friend list. If user is not logged into Facebook, the user logs in now.| | |
+|2.  |User gives JustAsk permission to access name and friend list|Facebook Manager notifies JustAsk of a successful login and local database fills with user information| | |
 
 |Post Condition|
 |--------------|
-|The User is logged in under their Facebook Account|
+|User is brought to the main activity (question list tab) of the app|
 
 ---
 
@@ -38,18 +39,16 @@ Last updated: November 21st, 2016
 
 |Preconditions|
 |-------------|
-|1. The system displays the main menu|
+|1. The system displays the main activity (question list tab)|
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Click the plus button in the buttom right corner|Pop up that displays blank for new question| | |
-|2.  |Enter a question into the blank space|System asks to onfirm the question| | |
-|3.  |Click Yes|System shows list of contacts| | |
-|4.  |Choose who to send the question to|System asks for confirmation of question| | |
-|5.  |Click Send|Question appears on the main menu| | |
+|1.  |Taps the plus button in the buttom right corner|New Question activity initialized prompting user for question details| | |
+|2.  |Enter a question and select recipients|Recipients receive a checkmark by their name (uncheck if Tapped again)| | |
+|3.  |Taps Send|Question sends to each contact in recipient list and is added to question list tab| | |
 
 |Post Condition|
 |--------------|
-|The question appears on the homepage and is sent to other users|
+|User is brought back to question list tab|
 
 
