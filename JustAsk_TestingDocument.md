@@ -146,7 +146,7 @@ Last updated: November 21st, 2016
 
 |Step|Action|Expected System Response|Pass/Fail|Comment|
 |----|------|------------------------|---------|-------|
-|1.  |Tap unanswered question in question list|Question activity appears| | |
+|1.  |Tap unanswered question in question list|Question activity is loaded and opens with question and recipient list from database| | |
 |2.  |Tap no in Question activity|Question activity updates to show the recipient has responded no and database is updated| | | 
 
 |Post Condition|
@@ -158,7 +158,7 @@ Last updated: November 21st, 2016
 ## Test Case 7: Unsucessful Facebook Login
 |System|Subsystem|Designed By|Design Date|Executed By|Executed Date|
 |------|---------|-----------|-----------|-----------|-------------|
-|JustAsk|Failed Login|Patrick Mancuso|10/21/16| | |
+|JustAsk|Login|Patrick Mancuso|10/21/16| | |
 
 |Preconditions|
 |-------------|
