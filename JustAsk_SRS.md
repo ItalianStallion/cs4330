@@ -2,7 +2,7 @@
 
 # JustAsk
 
-Prepared by [Ben Graham](http://github.com/graham768), [John Edward](http://github.com/), [Miles Vesper](http://github.com/), [Patrick Mancuso](http://github.com/ItalianStallion), and [Sam Dowd](http://github.com/samdowd).
+Prepared by [Ben Graham](https://github.com/graham768), [John Edward](https://github.com/johnedwardschwartzenburg), [Miles Vesper](https://github.com/), [Patrick Mancuso](https://github.com/ItalianStallion), and [Sam Dowd](https://github.com/samdowd).
 
 Last updated: October 21st, 2016
 
@@ -29,8 +29,8 @@ Last updated: October 21st, 2016
   4. [Communications Interfaces](#34-communications-interfaces)
 4. [System Features](#4-system-features)
   1. [Create and Send Questions](#41-create-and-send-questions)
-  2. [Receive Question or Reply](#42-receive-questions-or-reply)
-  3. [View All Group Messages](#43-view-all-group-messages)
+  2. [Receive Question or Reply](#42-receive-question-or-reply)
+  3. [View Messages](#43-view-messages)
 5. [Other Nonfunctional Requirements](#5-other-nonfunctional-requirements)
   1. [Performance Requirements](#51-performance-requirements)
   2. [Safety Requirements](#52-safety-requirements)
