@@ -2,9 +2,9 @@
 
 # JustAsk
 
-Prepared by [Ben Graham](http://github.com/graham768), [John Edward Schwartzenburg](http://github.com/), [Miles Vesper](http://github.com/mvesper20), [Patrick Mancuso](http://github.com/ItalianStallion), and [Sam Dowd](http://github.com/samdowd).
+Prepared by [Ben Graham](https://github.com/graham768), [John Edward Schwartzenburg](https://github.com/johnedwardschwartzenburg), [Miles Vesper](https://github.com/mvesper20), [Patrick Mancuso](https://github.com/ItalianStallion), and [Sam Dowd](https://github.com/samdowd).
 
-Last updated: November 21st, 2016
+Last updated: November 24st, 2016
 
 ## List of Test Cases
 #### 1 - [Successful Facebook Login](#test-case-1-successful-facebook-login)
