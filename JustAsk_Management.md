@@ -67,6 +67,7 @@ Below is a *very* rough estimation of the development of our application, as we 
 |Implement Question-asking feature|11/10/16|2 weeks|11/24/16|
 
 Using this rough estimate, we were able to make the following Gantt Chart.
+
 ![gantt chart](https://github.com/ItalianStallion/cs4330/blob/master/Screen%20Shot%202016-11-25%20at%203.49.07%20PM.png)
 
 ---
