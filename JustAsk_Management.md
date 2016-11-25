@@ -29,11 +29,12 @@ Our team will be using multiple resources to manage and work on our application.
 ---
 
 ## Process Model
+Considering the short time frame our team has to complete this project and the inexperience of our team in Android Development, we will be focusing on agile development as our process model. We want to be able to produce the software relatively quickly and have the ability to go back in our work and change things on the fly as we spot mistakes. Also, there is no real liability risk with this application, so a focus on safety is not our main priority. The agile method works with the time table and experience of our team more than any other model.
 
 ---
 
 ## Deliverables
-Our application only has one deliverable and that is the executable app that the use can download from the Google Play store.
+Our application only has one deliverable and that is the executable app that the user can download from the Google Play store.
 
 ---
 
