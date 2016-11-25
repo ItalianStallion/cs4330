@@ -10,10 +10,11 @@ Last updated: November 22, 2016
 ### [1. Vision](#vision)
 ### [2. Configuration Management Plan](#configuration-management-plan)
 ### [3. Process Model](#process-model)
-### [4. Potential Risks](#potential-risks)
-### [5. Team Members](#team-members)
-### [6. Project Schedule](#project-schedule)
-### [7. Meeting Summary](#meeting-summary)
+### [4. Deliverables](#deliverables)
+### [5. Potential Risks](#potential-risks)
+### [6. Team Members](#team-members)
+### [7. Project Schedule](#project-schedule)
+### [8. Meeting Summary](#meeting-summary)
 
 ---
 
@@ -23,10 +24,16 @@ For this application, we wanted to make a simple, easy-to-use rsvp app that lets
 ---
 
 ## Configuration Management Plan
+Our team will be using multiple resources to manage and work on our application. Github will be used to store and keep track of the version history of all of our documents, including the most up-to-date version of our app. We will also be using Google Drive as a document editing tool where we can all be working on the same document in real time and giving feedback to each other. For communication purposes, outside of meetings, we will be using Groupme.
 
 ---
 
 ## Process Model
+
+---
+
+## Deliverables
+Our application only has one deliverable and that is the executable app that the use can download from the Google Play store.
 
 ---
 
@@ -47,6 +54,19 @@ Because of the inexperience of our team with application development, we have de
 ---
 
 ## Project Schedule 
+Below is a *very* rough estimation of the development of our application, as we do not know the specifics of developing in Android Studio.
+
+|Task|Start Date|Time Spent|End Date|
+|----|----------|----------|-------:|
+|Set up the Project in Studio with a basic activity|10/20/16|1 week|10/27/16|
+|Set up the backend of the application using Google Firebase|10/27/16|2 weeks|11/10/16|
+|Connect the application to Facebook with login system|10/27/16|2 weeks|11/10/16|
+|Implement Interface Design|10/27/16|1 week|11/3/16|
+|Connect User's friends on Facebook to them on JustAsk|11/3/16|1 week|11/10/16|
+|Implement Question-asking feature|11/10/16|2 weeks|11/24/16|
+
+Using this rough estimate, we were able to make the following Gantt Chart.
+![gantt chart](http://imgur.com/CFdJUMW)
 
 ---
 
