@@ -53,7 +53,7 @@
             android:layout_height="match_parent"
             android:id="@+id/send_button"
             android:layout_weight="1"
-            android:onClick="sendQuestion" />
+            android:onClick="showNotification" />
     </LinearLayout>
 
 </LinearLayout>
