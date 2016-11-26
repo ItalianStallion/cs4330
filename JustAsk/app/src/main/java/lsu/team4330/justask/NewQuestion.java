@@ -54,6 +54,6 @@ public class NewQuestion extends AppCompatActivity {
     }
 
     public void cancel(View view) {
-        // When cancel button is clicked
+        finish();
     }
 }
