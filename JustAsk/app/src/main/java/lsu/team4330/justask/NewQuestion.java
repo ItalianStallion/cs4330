@@ -69,7 +69,7 @@ public class NewQuestion extends AppCompatActivity {
         NotificationCompat.Builder mbuilder =
                 new NotificationCompat.Builder(this)
                         .setTicker("JustAsk Question!")
-                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setSmallIcon(R.mipmap.ic_launcher)
                         .setContentTitle("Question!")
                         .setContentText("You have a new question in JustAsk")
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
