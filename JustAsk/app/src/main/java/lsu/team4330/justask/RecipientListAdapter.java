@@ -33,7 +33,7 @@ public class RecipientListAdapter extends ArrayAdapter<String>{
             view = layoutInflater.inflate(layoutResource, null);
         }
 
-        String str = (String) getItem(position);
+        String str = getItem(position);
 
         if (str != null) {
             TextView nameTextView = (TextView) view.findViewById(R.id.name_text_view);
