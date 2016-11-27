@@ -7,18 +7,20 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /*
 Class for adapting Questions to the Question List in the Main Activity
 TODO: Replace String lists with question details
  */
-public class QuestionListAdapter extends ArrayAdapter<String>{
+public class QuestionListAdapter extends ArrayAdapter<Question>{
 
     private int layoutResource;
 
-    public QuestionListAdapter(Context context, int layoutResource, List<String> strings) {
-        super(context, layoutResource, strings);
+    public QuestionListAdapter(Context context, int layoutResource, List<Question> questions) {
+        super(context, layoutResource, questions);
         this.layoutResource = layoutResource;
     }
 
@@ -32,13 +34,21 @@ public class QuestionListAdapter extends ArrayAdapter<String>{
             view = layoutInflater.inflate(layoutResource, null);
         }
 
-        String str = (String) getItem(position);
+        Question question = (Question) getItem(position);
 
-        if (str != null) {
-            TextView nameTextView = (TextView) view.findViewById(R.id.name_text_view);
+        if (question != null) {
+            TextView questionTextView = (TextView) view.findViewById(R.id.question_text_view);
+            TextView senderTextView = (TextView) view.findViewById(R.id.sender_text_view);
+            TextView timeTextView = (TextView) view.findViewById(R.id.time_text_view);
 
-            if (nameTextView != null) {
-                nameTextView.setText(str);
+            if (questionTextView != null) {
+                questionTextView.setText(question.getQuestion());
+            }
+            if (senderTextView != null) {
+                senderTextView.setText(question.getSender().getName());
+            }
+            if (timeTextView != null) {
+                timeTextView.setText(Integer.toString(question.getTime()));
             }
         }
 
