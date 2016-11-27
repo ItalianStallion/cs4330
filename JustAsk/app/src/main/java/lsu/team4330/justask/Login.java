@@ -1,6 +1,7 @@
 package lsu.team4330.justask;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
@@ -19,13 +20,20 @@ public class Login extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.login);
+
+
         loginButton = (LoginButton) findViewById(R.id.login_button);
-        info = (TextView)findViewById(R.id.info);
+
+        info = (TextView) findViewById(R.id.info);
+//        TextView justAsk = (TextView) findViewById(R.id.just_ask);
+//
+//        Typeface type = Typeface.createFromAsset(getAssets(),"fonts/Damion-Regular.ttf");
+//        justAsk.setTypeface(type);
+
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>()
         {
             @Override

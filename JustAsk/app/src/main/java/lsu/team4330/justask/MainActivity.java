@@ -13,6 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.res.Resources;
+import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
@@ -97,4 +104,5 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, NewQuestion.class);
         startActivity(intent);
     }
+
 }

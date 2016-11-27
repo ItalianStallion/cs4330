@@ -40,7 +40,7 @@
 
         <activity
             android:name=".Login"
-            android:label="Login"
+            android:label="JustAsk"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,6 +54,23 @@
             android:label="@string/new_question"
             android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".MainActivity" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ShowNotificationDetailActivity"
+            android:label="@string/new_notification"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" >
+            <intent-filter>
+                <action android:name="notification_responce" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data

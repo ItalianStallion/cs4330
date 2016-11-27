@@ -2,6 +2,7 @@
     <string name="app_name">JustAsk</string>
     <string name="questions">Questions</string>
     <string name="new_question">New Question</string>
+    <string name="new_notification">New Notification</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
