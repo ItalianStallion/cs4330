@@ -101,20 +101,4 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void showNotification(view v) {
-        PendingIntent pIntent = PendingIntent.getActivity(this, 0, new Intent(this, ShowNotificationDetailActivity.class), 0);
-        Resources r = getResources();
-        Notification notification = new NotificationCompat.Builder(this)
-                .setTicker("JustAsk Question!")
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setContentTitle("Question!")
-                .setContentText("You have a new question in JustAsk")
-                .setContentIntent(pIntent)
-                .setAutoCancel(true)
-                .build();
-
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.notify(0, notification);
-    }
-
 }
