@@ -66,18 +66,18 @@ public class NewQuestion extends AppCompatActivity {
     public void showNotification(View v) {
         PendingIntent pIntent = PendingIntent.getActivity(this, 0, new Intent(this, ShowNotificationDetailActivity.class), 0);
         Resources r = getResources();
-        Notification notification = new NotificationCompat.Builder(this)
-                .setTicker("JustAsk Question!")
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setContentTitle("Question!")
-                .setContentText("You have a new question in JustAsk")
-                .setContentIntent(pIntent)
-                .addAction(0, "Yes", pIntent)
-                .addAction(1, "No", pIntent)
-                .setAutoCancel(true)
-                .build();
+        NotificationCompat.Builder mbuilder =
+                new NotificationCompat.Builder(this)
+                        .setTicker("JustAsk Question!")
+                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setContentTitle("Question!")
+                        .setContentText("You have a new question in JustAsk")
+                        .setDefaults(NotificationCompat.DEFAULT_ALL)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .addAction(R.drawable.ic_yes_black_24dp, "Yes", pIntent)
+                        .addAction(R.drawable.ic_no_black_24dp, "No", pIntent);
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.notify(0, notification);
+        notificationManager.notify(0, mbuilder.build());
     }
 }
