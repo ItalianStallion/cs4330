@@ -38,10 +38,10 @@ public class Question extends AppCompatActivity {
 
         //Hardcoded recipient list for demo
         List<String> recipients = new ArrayList<>();
-        recipients.add("Alan Turing");
-        recipients.add("Grace Hopper");
-        recipients.add("Ada Lovelace");
-        recipients.add("Nash Mahmoud");
+        recipients.add("Miles Vesper");
+        recipients.add("Sam Dowd");
+        recipients.add("Patrick Mancuso");
+        recipients.add("John Schwartzenburg");
 
         // Setup Recipient list
         ListView recipientListView = (ListView) findViewById(R.id.recipient_list_view);
