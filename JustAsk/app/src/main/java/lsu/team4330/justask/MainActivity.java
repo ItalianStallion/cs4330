@@ -13,7 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,12 +47,27 @@ public class MainActivity extends AppCompatActivity
 
         // Hardcoded questionList to populate MainActivity question_list_view
         List<Question> questionList = new ArrayList<>();
-        questionList.add(new Question("Are you free for lunch?", 123, new User("John Smith", 1),450));
+        questionList.add(new Question("Are you free for lunch?", 123, new User("Ben Graham", 1),1130));
+        questionList.add(new Question("Poker tonight?", 123, new User("Patrick Mancuso", 2),630));
+        questionList.add(new Question("Who wants to hang out after class?", 123, new User("Miles Vesper", 3),1200));
+        questionList.add(new Question("Study in the library?", 123, new User("John Schwartzenburg", 4),1800));
+        questionList.add(new Question("Did you commit to the repo today?", 123, new User("Sam Dowd", 5),2030));
 
         // ListView setup
-        ListView questionListView = (ListView) findViewById(R.id.question_list_view);
+        final ListView questionListView = (ListView) findViewById(R.id.question_list_view);
         QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_list_item, questionList);
         questionListView.setAdapter(adapter);
+
+        questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                Question item = (Question) questionListView.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this, Question.class);
+                intent.putExtra("QUESTION", item.getQuestion());
+                // TODO: Add Sender and time putExtra here
+                startActivity(intent);
+            }
+        });
 
     }
 
