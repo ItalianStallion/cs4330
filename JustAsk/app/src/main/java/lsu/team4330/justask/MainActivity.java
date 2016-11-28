@@ -19,6 +19,15 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.res.Resources;
+import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,6 +35,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
 
         // Sets up toolbar and action buttons for it
@@ -127,4 +138,5 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, NewQuestion.class);
         startActivity(intent);
     }
+
 }

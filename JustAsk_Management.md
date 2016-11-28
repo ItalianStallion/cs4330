@@ -80,3 +80,4 @@ Using this rough estimate, we were able to make the following Gantt Chart.
 |10/19/16|All Group Members Present|Meeting to work on the Requirements Document and polish it up for grading|
 |10/31/16|All Group Members Present|Goal for this meeting was to discuss and begin working on the system design document. Individual Members were to work on certain sections in Google Docs and put the complete document on Github when finished|
 |11/21/16|All Group Members Present|The testing document was due tonight, so the team met to discuss all possible testing paths to produce a complete testing document|
+|11/27/16|All Group Members but Sam Dowd|Discuss the design of the powerpoint presentation and practice the presentation|
