@@ -47,10 +47,10 @@ public class NewQuestion extends AppCompatActivity {
         // String list stub for demoing
         //TODO: Replace with an ArrayList of Users or user information
         List<String> recipients = new ArrayList<>();
-        recipients.add("Alan Turing");
-        recipients.add("Grace Hopper");
-        recipients.add("Ada Lovelace");
-        recipients.add("Nash Mahmoud");
+        recipients.add("Miles Vesper");
+        recipients.add("Sam Dowd");
+        recipients.add("Patrick Mancuso");
+        recipients.add("John Schwartzenburg");
 
         // Adapts Users to Recipient List
         ListView recipientListView = (ListView)findViewById(R.id.recipient_list_view);

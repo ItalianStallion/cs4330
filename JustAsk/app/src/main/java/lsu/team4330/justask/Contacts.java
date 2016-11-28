@@ -32,16 +32,16 @@ public class Contacts extends AppCompatActivity {
 
         // String list stub for demoing
         //TODO: Replace with an ArrayList of Users or user information
-        List<String> strings = new ArrayList<>();
-        String str = "Alan Turing";
-        strings.add(str);
-        String str2 = "Grace Hopper";
-        strings.add(str2);
+        List<String> recipients = new ArrayList<>();
+        recipients.add("Miles Vesper");
+        recipients.add("Sam Dowd");
+        recipients.add("Patrick Mancuso");
+        recipients.add("John Schwartzenburg");
 
         // Adapts Users to Recipient List
-        ListView recipientListView = (ListView)findViewById(R.id.recipient_list_view);
-        RecipientListAdapter adapter = new RecipientListAdapter(this, R.layout.recipient_list_item, strings);
-        recipientListView.setAdapter(adapter);
+        ListView contactListView = (ListView)findViewById(R.id.recipient_list_view);
+        RecipientListAdapter adapter = new RecipientListAdapter(this, R.layout.contacts_list_item, recipients);
+        contactListView.setAdapter(adapter);
 
         // Retrieves a database reference
         FirebaseDatabase database = FirebaseDatabase.getInstance();

@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contacts) {
             intent = new Intent(this, Contacts.class);
         } else if (id == R.id.nav_settings) {
-            intent = new Intent(this, NewQuestion.class);
+            intent = new Intent(this, Settings.class);
         }
 
 
