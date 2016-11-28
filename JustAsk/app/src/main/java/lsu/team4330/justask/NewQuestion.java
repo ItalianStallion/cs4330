@@ -80,6 +80,8 @@ public class NewQuestion extends AppCompatActivity {
 
     public void sendQuestion(View view) {
         showNotification(view);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void cancel(View view) {
@@ -102,7 +104,7 @@ public class NewQuestion extends AppCompatActivity {
                 new NotificationCompat.Builder(this)
                         .setTicker("JustAsk Question!")
                         .setSmallIcon(R.drawable.ic_launcher_silhouette)
-                        .setContentTitle("John Smith")
+                        .setContentTitle("Ben Graham")
                         .setContentText(question)
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -117,11 +119,13 @@ public class NewQuestion extends AppCompatActivity {
         Log.d("NewQuestion", "actionYes");
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancel(NOTIFICATION_ID);
+        finish();
     }
 
     public void actionNo() {
         Log.d("NewQuestion", "actionNo");
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancel(NOTIFICATION_ID);
+        finish();
     }
 }
