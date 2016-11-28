@@ -2,8 +2,8 @@ package lsu.team4330.justask;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -31,6 +31,8 @@ import com.facebook.appevents.AppEventsLogger;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,17 +122,21 @@ public class MainActivity extends AppCompatActivity
 
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Intent intent = new Intent();
 
         if (id == R.id.nav_question) {
             // Handle question tab click
+            intent = new Intent(this, MainActivity.class);
         } else if (id == R.id.nav_contacts) {
-
+            intent = new Intent(this, Contacts.class);
         } else if (id == R.id.nav_settings) {
-
+            intent = new Intent(this, NewQuestion.class);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+        startActivity(intent);
         return true;
     }
 

@@ -9,6 +9,7 @@
         android:textSize="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:id="@+id/name_text_view"
         android:layout_weight="1"
         android:textAlignment="center"/>
@@ -16,6 +17,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:paddingRight="@dimen/pad_50"
         android:id="@+id/checkBox"/>
 
