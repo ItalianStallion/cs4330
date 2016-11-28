@@ -13,6 +13,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+//TODO: If logged in launch MainActivity, else launch Login.
 public class Login extends FragmentActivity {
     private CallbackManager callbackManager;
     private TextView info;
@@ -29,10 +30,10 @@ public class Login extends FragmentActivity {
         loginButton = (LoginButton) findViewById(R.id.login_button);
 
         info = (TextView) findViewById(R.id.info);
-//        TextView justAsk = (TextView) findViewById(R.id.just_ask);
-//
-//        Typeface type = Typeface.createFromAsset(getAssets(),"fonts/Damion-Regular.ttf");
-//        justAsk.setTypeface(type);
+        TextView justAsk = (TextView) findViewById(R.id.just_ask);
+
+        Typeface type = Typeface.createFromAsset(getAssets(),"fonts/Damion-Regular.ttf");
+        justAsk.setTypeface(type);
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>()
         {
@@ -46,6 +47,9 @@ public class Login extends FragmentActivity {
                                 "Auth Token: "
                                 + loginResult.getAccessToken().getToken()
                 );
+                Intent intent = new Intent(Login.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
 
             @Override

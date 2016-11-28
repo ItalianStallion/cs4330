@@ -19,6 +19,7 @@
 
     <TextView
         android:text="JustAsk"
+        android:textColor="@color/colorYellow"
         android:textAlignment="center"
         android:gravity="center"
         android:textSize="50dp"
