@@ -13,6 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -32,20 +38,48 @@ public class MainActivity extends AppCompatActivity
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
+
+        // Sets up toolbar and action buttons for it
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        // Creates drawer and sets listener for drawer events
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        // Sets up NavigationView for the DrawerLayout
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Hardcoded questionList to populate MainActivity question_list_view
+        List<Question> questionList = new ArrayList<>();
+        questionList.add(new Question("Are you free for lunch?", 123, new User("Ben Graham", 1),1130));
+        questionList.add(new Question("Poker tonight?", 123, new User("Ben Graham", 2),630));
+        questionList.add(new Question("Who wants to hang out after class?", 123, new User("Miles Vesper", 3),1200));
+        questionList.add(new Question("Study in the library?", 123, new User("John Schwartzenburg", 4),1800));
+        questionList.add(new Question("Did you commit to the repo today?", 123, new User("Patrick Mancuso", 5),2030));
+
+        // ListView setup
+        final ListView questionListView = (ListView) findViewById(R.id.question_list_view);
+        QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_list_item, questionList);
+        questionListView.setAdapter(adapter);
+
+        questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                Question item = (Question) questionListView.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this, Question.class);
+                // TODO: change putExtra to questionId; Use id to pull recipient list in Question.class
+                intent.putExtra("QUESTION", item.getQuestion());
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
