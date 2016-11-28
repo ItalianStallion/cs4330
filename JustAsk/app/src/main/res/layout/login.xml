@@ -12,7 +12,7 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="220dp"
+        android:layout_height="250dp"
         app:srcCompat="@drawable/justask_large_silhouette"
         android:id="@+id/imageView"
         android:layout_weight="0.12" />
@@ -22,13 +22,14 @@
         android:textColor="@color/colorYellow"
         android:textAlignment="center"
         android:gravity="center"
-        android:textSize="50dp"
+        android:textSize="65dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/just_ask"/>
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
+        android:textSize="17dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

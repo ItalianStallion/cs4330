@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.CallbackManager;
@@ -25,6 +26,9 @@ public class Login extends FragmentActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.login);
+
+        ImageView iv = (ImageView) findViewById(R.id.imageView);
+        iv.setImageResource(R.drawable.justask_large_silhouette);
 
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
