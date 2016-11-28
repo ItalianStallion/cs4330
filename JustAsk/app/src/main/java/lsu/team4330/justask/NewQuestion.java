@@ -101,11 +101,12 @@ public class NewQuestion extends AppCompatActivity {
         NotificationCompat.Builder mbuilder =
                 new NotificationCompat.Builder(this)
                         .setTicker("JustAsk Question!")
-                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setSmallIcon(R.drawable.ic_launcher_silhouette)
                         .setContentTitle("John Smith")
                         .setContentText(question)
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setColor(getResources().getColor(R.color.colorPurple))
                         .addAction(R.drawable.ic_yes_black_24dp, "Yes", yesPendingIntent)
                         .addAction(R.drawable.ic_no_black_24dp, "No", noPendingIntent);
 

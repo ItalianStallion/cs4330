@@ -25,7 +25,7 @@ public class Login extends FragmentActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
 
         ImageView iv = (ImageView) findViewById(R.id.imageView);
         iv.setImageResource(R.drawable.justask_large_silhouette);
