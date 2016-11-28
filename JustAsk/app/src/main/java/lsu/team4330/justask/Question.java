@@ -27,15 +27,26 @@ public class Question extends AppCompatActivity {
         Intent intent = getIntent();
         String question = intent.getStringExtra("QUESTION");
 
-        TextView questionTextView = (TextView) findViewById(R.id.question_text_view);
-        questionTextView.setText(question);
-
         // Creates toolbar and handles back navigation
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Displays Question
+        TextView questionTextView = (TextView) findViewById(R.id.question_text_view);
+        questionTextView.setText(question);
 
+        //Hardcoded recipient list for demo
+        List<String> recipients = new ArrayList<>();
+        recipients.add("Alan Turing");
+        recipients.add("Grace Hopper");
+        recipients.add("Ada Lovelace");
+        recipients.add("Nash Mahmoud");
+
+        // Setup Recipient list
+        ListView recipientListView = (ListView) findViewById(R.id.recipient_list_view);
+        RecipientListAdapter adapter = new RecipientListAdapter(this, R.layout.recipient_list_item_2, recipients);
+        recipientListView.setAdapter(adapter);
 
     }
 

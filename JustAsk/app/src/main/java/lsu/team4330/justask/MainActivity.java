@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                 Question item = (Question) questionListView.getItemAtPosition(position);
                 Intent intent = new Intent(MainActivity.this, Question.class);
+                // TODO: change putExtra to questionId; Use id to pull recipient list in Question.class
                 intent.putExtra("QUESTION", item.getQuestion());
-                // TODO: Add Sender and time putExtra here
                 startActivity(intent);
             }
         });

@@ -32,15 +32,15 @@ public class NewQuestion extends AppCompatActivity {
 
         // String list stub for demoing
         //TODO: Replace with an ArrayList of Users or user information
-        List<String> strings = new ArrayList<>();
-        String str = "Alan Turing";
-        strings.add(str);
-        String str2 = "Grace Hopper";
-        strings.add(str2);
+        List<String> recipients = new ArrayList<>();
+        recipients.add("Alan Turing");
+        recipients.add("Grace Hopper");
+        recipients.add("Ada Lovelace");
+        recipients.add("Nash Mahmoud");
 
         // Adapts Users to Recipient List
         ListView recipientListView = (ListView)findViewById(R.id.recipient_list_view);
-        RecipientListAdapter adapter = new RecipientListAdapter(this, R.layout.recipient_list_item, strings);
+        RecipientListAdapter adapter = new RecipientListAdapter(this, R.layout.recipient_list_item, recipients);
         recipientListView.setAdapter(adapter);
 
         // Retrieves a database reference
