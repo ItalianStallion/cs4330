@@ -44,11 +44,9 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 ---
 
 ## Team Members
-Benjamin Graham: Tasks include but not limited to design of the backend database due to his experience with Google's Firebase API.
+**Miles Vesper** I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implimentation as well as integrating the app to Facebook. Lastly, I created most of the slideshow presentation.
 
-Sam Dowd and Patrick Mancuso: Their tasks include designing the layout and functionality of the application pages. Switching between pages is also an important task, as our application will be focused on ease-of-use.
-
-Miles Vesper and John Edward Schwartzenburg: tasks will focus on the login system using Facebook and the push notifications for questions.
+Everyone lists themselves here and how they contributed
 
 Because of the inexperience of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.
 
@@ -81,3 +79,4 @@ Using this rough estimate, we were able to make the following Gantt Chart.
 |10/31/16|All Group Members Present|Goal for this meeting was to discuss and begin working on the system design document. Individual Members were to work on certain sections in Google Docs and put the complete document on Github when finished|
 |11/21/16|All Group Members Present|The testing document was due tonight, so the team met to discuss all possible testing paths to produce a complete testing document|
 |11/27/16|All Group Members but Sam Dowd|Discuss the design of the powerpoint presentation and practice the presentation|
+|11/28/16|All Group Members but Sam Dowd|Reviewed the powerpoint and practiced presentation|
