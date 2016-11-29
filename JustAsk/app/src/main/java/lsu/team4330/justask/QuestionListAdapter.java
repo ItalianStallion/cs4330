@@ -1,3 +1,17 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: QuestionListAdapter.java
+/*
+/* DESCRIPTION: takes individual questions and puts them in a list to be displayed on the
+/*               home page
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/26/2016 Ben Graham       Created the class
+/* 11/27/2016 Ben Graham       implemented home page arrows
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
 
 import android.content.Context;
@@ -21,11 +35,13 @@ public class QuestionListAdapter extends ArrayAdapter<Question>{
 
     private int layoutResource;
 
+    //create the listAdapter
     public QuestionListAdapter(Context context, int layoutResource, List<Question> questions) {
         super(context, layoutResource, questions);
         this.layoutResource = layoutResource;
     }
 
+    //creates the question in the list to be displayed on the home page
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

@@ -1,3 +1,17 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: Login.java
+/*
+/* DESCRIPTION: java file for logging in the app via Facebook, including the activity for
+/*              initial screen when opening the app
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/26/2016 Patrick Mancuso  Created the class
+/* 11/27/2016 Ben Graham       Modified the receipients list
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
 
 import android.content.Intent;
@@ -14,7 +28,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-//TODO: If logged in launch MainActivity, else launch Login.
+//login to a Facebook account
 public class Login extends FragmentActivity {
     private CallbackManager callbackManager;
     private TextView info;

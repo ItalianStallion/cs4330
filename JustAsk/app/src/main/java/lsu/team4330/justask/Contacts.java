@@ -5,11 +5,10 @@
 /* DESCRIPTION: java file for the corresponding contacts xml file. Functionality for the
 /*              contacts tab of the application
 /*
-/*
-/* DATE       BY               DESCRIPTION
-/* ========== ===============  =============
-/* 11/26/2016 Patrick Mancuso  Created the class
-/* 11/27/2016 Ben Graham       Modified the receipients list
+/* DATE       BY                  DESCRIPTION
+/* ========== ==================  =============
+/* 11/26/2016 John Shwartzenburg  Created the class
+/* 11/26/2016 Ben Graham          added notification icon to login screen
 /*
 /****************************************************************************************/
 
@@ -40,7 +39,6 @@ public class Contacts extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
         // String list stub for demoing
         //TODO: Replace with an ArrayList of Users or user information
         List<String> recipients = new ArrayList<>();
@@ -56,12 +54,5 @@ public class Contacts extends AppCompatActivity {
 
         // Retrieves a database reference
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-
     }
-
-
-
-
-
 }

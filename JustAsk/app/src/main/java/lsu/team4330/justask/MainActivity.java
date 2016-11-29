@@ -1,3 +1,22 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: MainActivity.java
+/*
+/* DESCRIPTION: main activity for app, including the drawer to switch to other tabs and
+/*                the home screen (a list of all questions)
+/*
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/1/2016  Ben Graham       Created the class
+/* 11/24/2016 Ben Graham       added question layout
+/* 11/26/2016 Miles Vesper     add notification method
+/* 11/27/2016 Ben Graham       implement arrows on list
+/* 11/27/2016 Ben Graham       Connected question list to their activities
+/* 11/27/2016 Ben Graham       add settings page
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
 
 import android.content.Intent;
@@ -29,11 +48,11 @@ import android.support.v7.app.ActionBarActivity;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
+//class for the homepage activity
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
-
+    //method that is called when the homepage is opened
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +90,7 @@ public class MainActivity extends AppCompatActivity
         QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_list_item, questionList);
         questionListView.setAdapter(adapter);
 
+        //opens activity for individual question
         questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
@@ -84,6 +104,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    //returns to the homepage from another tab
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -94,6 +115,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //creates side menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -101,11 +123,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // Handle action bar item clicks here. The action bar will
+    // automatically handle clicks on the Home/Up button, so long
+    // as you specify a parent activity in AndroidManifest.xml.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -116,11 +139,11 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    // Handle navigation view item clicks here.
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
         Intent intent = new Intent();
 
@@ -133,13 +156,13 @@ public class MainActivity extends AppCompatActivity
             intent = new Intent(this, Settings.class);
         }
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         startActivity(intent);
         return true;
     }
 
+    //method that opens the new question creation activity
     public void newQuestion(View view) {
         Intent intent = new Intent(this, NewQuestion.class);
         startActivity(intent);

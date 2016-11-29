@@ -1,3 +1,18 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: RecipientListAdapter.java
+/*
+/* DESCRIPTION: displays the list of recipients of the question and their responses
+/*              including names and a check or 'x' representing 'yes' and 'no' responses
+/*
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/25/2016 Ben Graham       Created the class
+/* 11/26/2016 Ben Graham       added 'yes' and 'no' icons
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
 
 import android.content.Context;
@@ -22,11 +37,13 @@ public class RecipientListAdapter extends ArrayAdapter<String>{
     private int layoutResource;
     // TODO: Replace and use database to load.
 
+    //creates the recipient list adapter
     public RecipientListAdapter(Context context, int layoutResource, List<String> strings) {
         super(context, layoutResource, strings);
         this.layoutResource = layoutResource;
     }
 
+    //displays the names of the recipients and their response
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

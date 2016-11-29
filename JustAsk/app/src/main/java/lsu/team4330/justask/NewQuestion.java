@@ -1,3 +1,20 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: NewQuestion.java
+/*
+/* DESCRIPTION: java file for creating a new page, connected to the new question
+/*                layout
+/*
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/24/2016 Ben Graham       Created the class
+/* 11/25/2016 Ben Graham       Created list adapter
+/* 11/26/2016 Ben Graham       Add notification compatibility
+/*
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
 
 import android.app.Notification;
@@ -22,10 +39,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/*
-Class for creating new questions to send to selected users in recipientListView.
- */
+//Class for creating new questions to send to selected users in recipientListView.
 public class NewQuestion extends AppCompatActivity {
 
     public static final String ACTION_YES = "lsu.team4330.justask.NewQuestion.actionYes";
@@ -78,16 +92,19 @@ public class NewQuestion extends AppCompatActivity {
         registerReceiver(receiver, filter);
     }
 
+    //sends the notification to users once a question is created
     public void sendQuestion(View view) {
         showNotification(view);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
+    //to cancel the new question process
     public void cancel(View view) {
         finish();
     }
 
+    //method that displays the notification and creates the layout for the design
     public void showNotification(View v) {
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -115,6 +132,7 @@ public class NewQuestion extends AppCompatActivity {
         notificationManager.notify(NOTIFICATION_ID, mbuilder.build());
     }
 
+    //method that deletes the notification once "yes" is selected
     public void actionYes() {
         Log.d("NewQuestion", "actionYes");
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -122,6 +140,7 @@ public class NewQuestion extends AppCompatActivity {
         finish();
     }
 
+    //method that deletes the notification once "no" is selected
     public void actionNo() {
         Log.d("NewQuestion", "actionNo");
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);

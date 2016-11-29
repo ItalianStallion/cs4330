@@ -1,3 +1,19 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: Question.java
+/*
+/* DESCRIPTION: java file that displays the details of a question once it is clicked from
+/*              the home page
+/*
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/26/2016 Ben Graham       Created the class
+/* 11/27/2016 Ben Graham       connect individual questions to the questionList and implement
+/*                              arrows
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
 
 import android.content.Intent;
@@ -12,6 +28,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
+//class for displaying an individual questions details
 public class Question extends AppCompatActivity {
 
     private String question;
@@ -19,6 +36,7 @@ public class Question extends AppCompatActivity {
     private User sender;
     private int time;
 
+    //method that is called once the activity begins
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +72,7 @@ public class Question extends AppCompatActivity {
         // No Args Constructor
     }
 
+    //details for an individual question
     Question(String question, int questionId, User sender, int time) {
         this.question = question;
         this.questionId = questionId;
@@ -61,18 +80,22 @@ public class Question extends AppCompatActivity {
         this.time = time;
     }
 
+    //returns the question
     public String getQuestion() {
         return this.question;
     }
 
+    //returns the question id
     public int getQuestionId() {
         return this.questionId;
     }
 
+    //returns the user that sent the question
     public User getSender() {
         return this.sender;
     }
 
+    //returns the time the question was sent
     public int getTime() {
         return this.time;
     }
