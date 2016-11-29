@@ -1,6 +1,19 @@
+/****************************************************************************************/
+/*
+/* FILE NAME: Contacts.java
+/*
+/* DESCRIPTION: java file for the corresponding contacts xml file. Functionality for the
+/*              contacts tab of the application
+/*
+/*
+/* DATE       BY               DESCRIPTION
+/* ========== ===============  =============
+/* 11/26/2016 Patrick Mancuso  Created the class
+/* 11/27/2016 Ben Graham       Modified the receipients list
+/*
+/****************************************************************************************/
+
 package lsu.team4330.justask;
-
-
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,12 +25,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/*
-Class for creating new questions to send to selected users in recipientListView.
- */
+//Class for the contacts tab
 public class Contacts extends AppCompatActivity {
 
+    //begins the execution for contacts
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
