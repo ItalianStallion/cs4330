@@ -60,11 +60,11 @@ public class MainActivity extends AppCompatActivity
 
         // Hardcoded questionList to populate MainActivity question_list_view
         List<Question> questionList = new ArrayList<>();
-        questionList.add(new Question("Are you free for lunch?", 123, new User("Ben Graham", 1),1130));
-        questionList.add(new Question("Poker tonight?", 123, new User("Ben Graham", 2),630));
-        questionList.add(new Question("Who wants to hang out after class?", 123, new User("Miles Vesper", 3),1200));
-        questionList.add(new Question("Study in the library?", 123, new User("John Schwartzenburg", 4),1800));
-        questionList.add(new Question("Did you commit to the repo today?", 123, new User("Patrick Mancuso", 5),2030));
+        questionList.add(new Question("Are you free for lunch?", "123", new User("Ben Graham", "1"),1130));
+        questionList.add(new Question("Poker tonight?", "123", new User("Ben Graham", "2"),630));
+        questionList.add(new Question("Who wants to hang out after class?", "123", new User("Miles Vesper", "3"),1200));
+        questionList.add(new Question("Study in the library?", "123", new User("John Schwartzenburg", "5"),1800));
+        questionList.add(new Question("Did you commit to the repo today?", "123", new User("Patrick Mancuso", "4"),2030));
 
         // ListView setup
         final ListView questionListView = (ListView) findViewById(R.id.question_list_view);

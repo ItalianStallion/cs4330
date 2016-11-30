@@ -15,7 +15,7 @@ import java.util.List;
 public class Question extends AppCompatActivity {
 
     private String question;
-    private int questionId;
+    private String questionId;
     private User sender;
     private int time;
 
@@ -54,7 +54,7 @@ public class Question extends AppCompatActivity {
         // No Args Constructor
     }
 
-    Question(String question, int questionId, User sender, int time) {
+    Question(String question, String questionId, User sender, int time) {
         this.question = question;
         this.questionId = questionId;
         this.sender = sender;
@@ -65,7 +65,7 @@ public class Question extends AppCompatActivity {
         return this.question;
     }
 
-    public int getQuestionId() {
+    public String getQuestionId() {
         return this.questionId;
     }
 
@@ -76,4 +76,5 @@ public class Question extends AppCompatActivity {
     public int getTime() {
         return this.time;
     }
+
 }

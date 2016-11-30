@@ -17,10 +17,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 /*
@@ -28,9 +30,12 @@ Class for creating new questions to send to selected users in recipientListView.
  */
 public class NewQuestion extends AppCompatActivity {
 
-    public static final String ACTION_YES = "lsu.team4330.justask.NewQuestion.actionYes";
-    public static final String ACTION_NO = "lsu.team4330.justask.NewQuestion.actionNo";
-    public static final int NOTIFICATION_ID = 0;
+    private static final String ACTION_YES = "lsu.team4330.justask.NewQuestion.actionYes";
+    private static final String ACTION_NO = "lsu.team4330.justask.NewQuestion.actionNo";
+    private static final int NOTIFICATION_ID = 0;
+
+    private EditText questionEditText;
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,7 @@ public class NewQuestion extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        EditText questionEditText = (EditText) findViewById(R.id.question_edit_text);
+        questionEditText = (EditText) findViewById(R.id.question_edit_text);
 
         // String list stub for demoing
         //TODO: Replace with an ArrayList of Users or user information
@@ -56,9 +61,6 @@ public class NewQuestion extends AppCompatActivity {
         ListView recipientListView = (ListView)findViewById(R.id.recipient_list_view);
         RecipientListAdapter adapter = new RecipientListAdapter(this, R.layout.recipient_list_item, recipients);
         recipientListView.setAdapter(adapter);
-
-        // Retrieves a database reference
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(ACTION_NO);
@@ -79,13 +81,31 @@ public class NewQuestion extends AppCompatActivity {
     }
 
     public void sendQuestion(View view) {
-        showNotification(view);
+        String questionId = UUID.randomUUID().toString();
+        String question = questionEditText.getText().toString();
+        User user = new User("Ben Graham", "123");
+
+        testNewQuestion(questionId, question);
+//        writeNewQuestion(questionId, question, user, 4567);
+
+//        showNotification(view);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void cancel(View view) {
         finish();
+    }
+
+    public void testNewQuestion(String questionId, String question) {
+        mDatabase.child("questions").child(questionId).setValue(question);
+    }
+
+    private void writeNewQuestion(String questionId, String question, User sender, int time) {
+
+        Question quest = new Question(question, questionId, sender, time);
+        mDatabase.child("questions").child(questionId).setValue(quest);
+
     }
 
     public void showNotification(View v) {

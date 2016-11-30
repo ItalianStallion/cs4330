@@ -7,9 +7,9 @@ package lsu.team4330.justask;
 public class User {
 
     private String name;
-    private int userId;
+    private String userId;
 
-    User(String name, int userId) {
+    User(String name, String userId) {
         this.name = name;
         this.userId = userId;
     }
@@ -18,7 +18,7 @@ public class User {
         return this.name;
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return this.userId;
     }
 }
