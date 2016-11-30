@@ -69,6 +69,7 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:background="@android:color/holo_red_dark"
+        android:onClick="deleteAccount"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:id="@+id/delete_button"
