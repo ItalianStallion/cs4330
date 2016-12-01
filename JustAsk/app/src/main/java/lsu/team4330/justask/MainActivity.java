@@ -28,19 +28,28 @@ import android.support.v7.app.ActionBarActivity;
 
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    public static AppCompatActivity main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
 
+        main = this;
+
+        if(FirebaseAuth.getInstance().getCurrentUser() == null) {
+            Intent intent = new Intent(this, Login.class);
+            startActivity(intent);
+            finish();
+        }
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         // Sets up toolbar and action buttons for it
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,28 +68,28 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         // Hardcoded questionList to populate MainActivity question_list_view
-        List<Question> questionList = new ArrayList<>();
-        questionList.add(new Question("Are you free for lunch?", "123", new User("Ben Graham", "1"),1130));
-        questionList.add(new Question("Poker tonight?", "123", new User("Ben Graham", "2"),630));
-        questionList.add(new Question("Who wants to hang out after class?", "123", new User("Miles Vesper", "3"),1200));
-        questionList.add(new Question("Study in the library?", "123", new User("John Schwartzenburg", "5"),1800));
-        questionList.add(new Question("Did you commit to the repo today?", "123", new User("Patrick Mancuso", "4"),2030));
-
-        // ListView setup
-        final ListView questionListView = (ListView) findViewById(R.id.question_list_view);
-        QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_list_item, questionList);
-        questionListView.setAdapter(adapter);
-
-        questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-                Question item = (Question) questionListView.getItemAtPosition(position);
-                Intent intent = new Intent(MainActivity.this, Question.class);
-                // TODO: change putExtra to questionId; Use id to pull recipient list in Question.class
-                intent.putExtra("QUESTION", item.getQuestion());
-                startActivity(intent);
-            }
-        });
+//        List<QuestionActivity> questionList = new ArrayList<>();
+//        questionList.add(new QuestionActivity("Are you free for lunch?", "123", new User("Ben Graham", "1"),1130));
+//        questionList.add(new QuestionActivity("Poker tonight?", "123", new User("Ben Graham", "2"),630));
+//        questionList.add(new QuestionActivity("Who wants to hang out after class?", "123", new User("Miles Vesper", "3"),1200));
+//        questionList.add(new QuestionActivity("Study in the library?", "123", new User("John Schwartzenburg", "5"),1800));
+//        questionList.add(new QuestionActivity("Did you commit to the repo today?", "123", new User("Patrick Mancuso", "4"),2030));
+//
+//        // ListView setup
+//        final ListView questionListView = (ListView) findViewById(R.id.question_list_view);
+//        QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_list_item, questionList);
+//        questionListView.setAdapter(adapter);
+//
+//        questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+//                Question item = (Question) questionListView.getItemAtPosition(position);
+//                Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+//                // TODO: change putExtra to questionId; Use id to pull recipient list in QuestionActivity.class
+//                intent.putExtra("QUESTION", item.getQuestion());
+//                startActivity(intent);
+//            }
+//        });
 
     }
 

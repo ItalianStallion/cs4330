@@ -8,10 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.List;
-import java.util.Random;
 
 /*
 Class for adapting Questions to the Question List in the Main Activity
@@ -20,6 +20,7 @@ TODO: Replace String lists with question details
 public class QuestionListAdapter extends ArrayAdapter<Question>{
 
     private int layoutResource;
+    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     public QuestionListAdapter(Context context, int layoutResource, List<Question> questions) {
         super(context, layoutResource, questions);
@@ -48,14 +49,14 @@ public class QuestionListAdapter extends ArrayAdapter<Question>{
                 questionTextView.setText(question.getQuestion());
             }
             if (senderTextView != null) {
-                senderTextView.setText(question.getSender().getName());
+                senderTextView.setText(question.getSender().getDisplayName());
             }
             if (timeTextView != null) {
-                timeTextView.setText(Integer.toString(question.getTime()));
+                timeTextView.setText(question.getTime());
             }
             if (imageView != null) {
-                //TODO: if sender == user
-                if(question.getSender().getName() == "Ben Graham") {
+                // if sender == user, message is outgoing
+                if(question.getSender().getDisplayName() == user.getDisplayName()) {
                     imageView.setImageResource(R.drawable.ic_arrow_outgoing_black_50dp);
                 }
                 else {

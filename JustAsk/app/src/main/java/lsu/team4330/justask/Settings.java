@@ -37,6 +37,7 @@ public class Settings extends AppCompatActivity {
         intent.putExtra("MESSAGE", "Logged out successfully");
         startActivity(intent);
 
+        MainActivity.main.finish();
         finish();
     }
 

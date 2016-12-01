@@ -6,7 +6,7 @@
     android:id="@+id/activity_question"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lsu.team4330.justask.Question">
+    tools:context="lsu.team4330.justask.QuestionActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
