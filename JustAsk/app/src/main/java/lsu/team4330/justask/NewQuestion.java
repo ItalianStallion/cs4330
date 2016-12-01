@@ -22,7 +22,9 @@ import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -85,12 +87,11 @@ public class NewQuestion extends AppCompatActivity {
     }
 
     public void sendQuestion(View view) {
-        Date d = new Date();
-        //TODO: Handle Time Zones
-        int timeDiff = 6; // 6hrs from standard in Baton Rouge
-        String time = (d.getTime() / 1000 / 60 / 60) % 24 + timeDiff + ":" + (d.getTime() / 1000 / 60) % 60;
-        Log.d(TAG, "Time = " + time);
+        // Time of question
+        SimpleDateFormat sdf = new SimpleDateFormat("h:mm a");
+        String time = sdf.format(Calendar.getInstance().getTime());
 
+        // Generate unique questionId and grab question text
         String questionId = UUID.randomUUID().toString();
         String questionText = questionEditText.getText().toString();
 
@@ -103,11 +104,12 @@ public class NewQuestion extends AppCompatActivity {
         mDatabase.getReference("questions").child(questionId).setValue(question);
         Log.d(TAG, "Sent to DB");
 
-//        mDatabase.getReference("users").child(profile.getUid()).setValue();
+        // TODO: Add question to each uid in recipient list
+        mDatabase.getReference("users").child(user.getUid()).child(questionId).setValue(question);
 
 
-//        Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void cancel(View view) {
