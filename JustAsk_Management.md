@@ -19,12 +19,12 @@ Last updated: November 22, 2016
 ---
 
 ## Vision
-For this application, we wanted to make a simple, easy-to-use rsvp app that lets users quickly respond to invitations and events. Everyone on our team uses some sort of third-party communication application such as groupme or slack, but we wanted to implement an app that simplifies some core ideas even further. Our application will be a simplified invitation/questionaire app to quickly receive feedback from friends. In the future, we may implement a polling feature such as StrawPoll to expand on our easy answer approach.
+For this application, we wanted to make a simple, easy-to-use rsvp app that lets users quickly respond to invitations and events. Everyone on our team uses some sort of third-party communication application such as GroupMe or Slack, but we wanted to implement an app that simplifies some core ideas even further. Our application will be a simplified invitation/questionaire app to quickly receive feedback from friends. In the future, we may implement a polling feature such as StrawPoll to expand on our easy answer approach.
 
 ---
 
 ## Configuration Management Plan
-Our team will be using multiple resources to manage and work on our application. Github will be used to store and keep track of the version history of all of our documents, including the most up-to-date version of our app. We will also be using Google Drive as a document editing tool where we can all be working on the same document in real time and giving feedback to each other. For communication purposes, outside of meetings, we will be using Groupme.
+Our team will be using multiple resources to manage and work on our application. Github will be used to store and keep track of the version history of all of our documents, including the most up-to-date version of our app. We will also be using Google Drive as a document editing tool where we can all be working on the same document in real time and giving feedback to each other. For communication purposes, outside of meetings, we will be using GroupMe.
 
 ---
 
@@ -44,14 +44,15 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 ---
 
 ## Team Members
-**Miles Vesper** I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implimentation as well as integrating the app to Facebook. Lastly, I created most of the slideshow presentation.
+**Miles Vesper** - I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implementation as well as integrating the app to Facebook. Lastly, I created most of the slideshow presentation.
 
-**John Edward Schwartzenburg** In the begginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that we're submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
+**John Edward Schwartzenburg** - In the beginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that we're submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
 
-**Patrick Mancuso** I was also present and worked on all the documentation. As for the application I focused mainly on the layouts as well as assisted Ben with the backend and database structure. Most of my work on the app was done as pair programming since i've never used Andriod Studios before i could contribute more pair programming with someone who is more familiar. 
-Everyone lists themselves here and how they contributed
+**Patrick Mancuso** - I was also present and worked on all the documentation. As for the application I focused mainly on designing the layouts as well as assisting Ben with the backend and database structure. Most of my work on the app was done as pair programming. Since I've never used Android Studios before we found that I would be able to contribute more and learn quicker by working with a more experienced partner.
 
-Because of the inexperience of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.
+**Ben Graham** - Having a more experienced background in Android development, I developed and oversaw many of the feature implementations and layout designs discussed in meetings and our documentation. I was also responsible for designing the backend with the help of Patrick and integrating it with Facebook thanks to John.
+
+Because of the inexperience of the majority of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.
 
 ---
 
@@ -76,7 +77,7 @@ Using this rough estimate, we were able to make the following Gantt Chart.
 ## Meeting Summary
 |Meeting Time|Members Present|Objective/Outcome|
 |------|---------------|-------------------------|
-|9/5/16|All Group Members Present|Meeting to discuss system ideas and presentation. We decided to make a notification application that allows people to check in on others with a simple notification to the receipients phone|
+|9/5/16|All Group Members Present|Meeting to discuss system ideas and presentation. We decided to make a notification application that allows people to check in on others with a simple notification to the recipient's phone|
 |10/12/16|All Group Members Present|Goal was to discuss the software requirements document. We decided that our check in idea would not be an ideal app due to liability risks, so we adapted the idea into an rsvp application for creating and receiving simple yes/no questions|
 |10/19/16|All Group Members Present|Meeting to work on the Requirements Document and polish it up for grading|
 |10/31/16|All Group Members Present|Goal for this meeting was to discuss and begin working on the system design document. Individual Members were to work on certain sections in Google Docs and put the complete document on Github when finished|
