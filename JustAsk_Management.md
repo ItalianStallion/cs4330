@@ -46,11 +46,13 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 ## Team Members
 **Miles Vesper** - I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implementation as well as integration with Facebook. Lastly, I created most of the slideshow presentation.
 
-**John Edward Schwartzenburg** - In the beginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that we're submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
+**John Edward Schwartzenburg** - In the beginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that were submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
 
 **Patrick Mancuso** - I was also present and worked on all the documentation. As for the application I focused mainly on designing the layouts as well as assisting Ben with the backend and database structure. Most of my work on the app was done as pair programming. Since I've never used Android Studios before we found that I would be able to contribute more and learn quicker by working with a more experienced partner.
 
 **Ben Graham** - Having a more experienced background in Android development, I developed and oversaw many of the feature implementations and layout designs discussed in meetings and our documentation. I was also responsible for designing the backend with the help of Patrick and integrating it with Facebook thanks to John.
+
+**Sam Dowd** - As with the rest of the team, I had a hand in every piece of documentation. I also made many of the design decisions with regards to the application itself as I have a background in graphic design and user interfaces. I was also the second most experienced in Android development behind Ben going into the project, so I helped to guide members with less experience.
 
 *Because of the inexperience of the majority of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.*
 
