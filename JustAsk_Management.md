@@ -44,7 +44,7 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 ---
 
 ## Team Members
-**Miles Vesper** - I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implementation as well as integrating the app to Facebook. Lastly, I created most of the slideshow presentation.
+**Miles Vesper** - I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implementation as well as integration with Facebook. Lastly, I created most of the slideshow presentation.
 
 **John Edward Schwartzenburg** - In the beginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that we're submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
 
@@ -52,7 +52,7 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 
 **Ben Graham** - Having a more experienced background in Android development, I developed and oversaw many of the feature implementations and layout designs discussed in meetings and our documentation. I was also responsible for designing the backend with the help of Patrick and integrating it with Facebook thanks to John.
 
-Because of the inexperience of the majority of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.
+*Because of the inexperience of the majority of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.*
 
 ---
 
