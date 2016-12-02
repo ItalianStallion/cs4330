@@ -2,7 +2,7 @@
 
 # JustAsk
 
-Prepared by [Ben Graham](http://github.com/graham768), [John Edward Schwartzenburg](http://github.com/), [Miles Vesper](http://github.com/mvesper20), [Patrick Mancuso](http://github.com/ItalianStallion), and [Sam Dowd](http://github.com/samdowd).
+Prepared by [Ben Graham](http://github.com/graham768), [John Edward Schwartzenburg](http://github.com/JohnEdwardSchwartzenburg), [Miles Vesper](http://github.com/mvesper20), [Patrick Mancuso](http://github.com/ItalianStallion), and [Sam Dowd](http://github.com/samdowd).
 
 Last updated: November 22, 2016
 
@@ -45,6 +45,8 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 
 ## Team Members
 **Miles Vesper** I worked on every document that was turned in for a grade, but mostly on the management document. With the application, I mainly focused on the notification implimentation as well as integrating the app to Facebook. Lastly, I created most of the slideshow presentation.
+
+**John Edward Schwartzenburg** In the begginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that we're submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
 
 Everyone lists themselves here and how they contributed
 
