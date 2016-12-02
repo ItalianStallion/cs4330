@@ -48,6 +48,7 @@ For risks, we designed our application with simplicity in mind, to minimize the 
 
 **John Edward Schwartzenburg** In the begginning, I came up with our app idea.  However, liability concerns led us to adjust the app idea slightly to what it is now. I contributed to the majority of the documents that we're submitted for grading. Lastly, I was responsible for integrating our app with Facebook.
 
+**Patrick Mancuso** I was also present and worked on all the documentation. As for the application I focused mainly on the layouts as well as assisted Ben with the backend and database structure. Most of my work on the app was done as pair programming since i've never used Andriod Studios before i could contribute more pair programming with someone who is more familiar. 
 Everyone lists themselves here and how they contributed
 
 Because of the inexperience of our team with application development, we have decided to adopt the egoless approach for our team management. Everyone will be equally responsible for the features of the application and must work together as equals for the implementation of features.
