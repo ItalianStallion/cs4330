@@ -57,8 +57,9 @@ public class Login extends FragmentActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+                // User is signed in
                 if (user != null) {
-                    // User is signed in
+                    // Start Main Activity
                     Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
                     finish();

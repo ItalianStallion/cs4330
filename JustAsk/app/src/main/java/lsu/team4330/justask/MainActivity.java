@@ -1,9 +1,10 @@
 package lsu.team4330.justask;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,31 +15,41 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.res.Resources;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.widget.TextView;
 
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
+import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private String TAG = "MainActivity";
+    private FirebaseUser currentUser;
+    private DatabaseReference ref;
     public static AppCompatActivity main;
+    private FirebaseListAdapter<Question> adapter;
+    private ListView questionListView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
+
+        //Activity for passing to settings on logout
+        //TODO: find more elegant solution
         main = this;
 
         // If user isn't logged in go to login activity
@@ -48,8 +59,9 @@ public class MainActivity extends AppCompatActivity
             finish();
         }
 
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
+        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        ref = FirebaseDatabase.getInstance().getReference("questions");
+
         // Sets up toolbar and action buttons for it
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -67,29 +79,49 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Hardcoded questionList to populate MainActivity question_list_view
-//        List<QuestionActivity> questionList = new ArrayList<>();
-//        questionList.add(new QuestionActivity("Are you free for lunch?", "123", new User("Ben Graham", "1"),1130));
-//        questionList.add(new QuestionActivity("Poker tonight?", "123", new User("Ben Graham", "2"),630));
-//        questionList.add(new QuestionActivity("Who wants to hang out after class?", "123", new User("Miles Vesper", "3"),1200));
-//        questionList.add(new QuestionActivity("Study in the library?", "123", new User("John Schwartzenburg", "5"),1800));
-//        questionList.add(new QuestionActivity("Did you commit to the repo today?", "123", new User("Patrick Mancuso", "4"),2030));
-//
-//        // ListView setup
-//        final ListView questionListView = (ListView) findViewById(R.id.question_list_view);
-//        QuestionListAdapter adapter = new QuestionListAdapter(this, R.layout.question_list_item, questionList);
-//        questionListView.setAdapter(adapter);
-//
-//        questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-//                Question item = (Question) questionListView.getItemAtPosition(position);
-//                Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
-//                // TODO: change putExtra to questionId; Use id to pull recipient list in QuestionActivity.class
-//                intent.putExtra("QUESTION", item.getQuestion());
-//                startActivity(intent);
-//            }
-//        });
+
+        adapter = new FirebaseListAdapter<Question>(this, Question.class, R.layout.question_list_item, ref) {
+            @Override
+            protected void populateView(View view, Question question, int position) {
+
+                if (view == null) {
+                    LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
+                    view = layoutInflater.inflate(R.layout.question_list_item, null);
+                }
+
+                TextView questionTextView = (TextView) view.findViewById(R.id.question_text_view);
+                TextView senderTextView = (TextView) view.findViewById(R.id.sender_text_view);
+                TextView timeTextView = (TextView) view.findViewById(R.id.time_text_view);
+                ImageView imageView = (ImageView) view.findViewById(R.id.image_view);
+
+                questionTextView.setText(question.getQuestion());
+                senderTextView.setText(question.getSender().getDisplayName());
+                timeTextView.setText(question.getTime());
+
+                // if currentUser is sender, message is outgoing
+                if(question.getSender().getUid().equals(currentUser.getUid())) {
+                    imageView.setImageResource(R.drawable.ic_arrow_outgoing_black_50dp);
+                }
+                else {
+                    imageView.setImageResource(R.drawable.ic_arrow_incoming_black_50dp);
+                }
+            }
+        };
+
+        // ListView setup
+        questionListView = (ListView) findViewById(R.id.question_list_view);
+        questionListView.setAdapter(adapter);
+
+        questionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                Question item = (Question) questionListView.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+                // TODO: change putExtra to questionId; Use id to pull recipient list in QuestionActivity.class
+                intent.putExtra("QUESTION", item.getQuestion());
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -153,5 +185,5 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, NewQuestion.class);
         startActivity(intent);
     }
-
 }
+
